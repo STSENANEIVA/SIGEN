@@ -1,0 +1,257 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Web.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %>  Seguimiento SGPS SENNOVA</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/sena.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="px-3 py-2  text-white" style="background-color: #FF6B00;">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                        <h2>SENNOVA</h2>
+                    </a>
+                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                        <asp:LoginView runat="server" ViewStateMode="Disabled">
+
+                            <AnonymousTemplate>
+                                <li>
+                                    <a class="nav-link text-white" runat="server" href="~/Servicios.aspx" ><h4>Servicios</h4></a>
+                                </li>
+                                <li>
+                                    <a class="nav-link text-white" runat="server" href="~/About.aspx"><h4>Nosotros</h4></a>
+                                </li>
+                                <li>
+                                    <a class="nav-link text-white" runat="server" href="~/Contact.aspx"><h4>Contactenos</h4></a>
+                                </li>
+                                
+                                <li>
+                                    <a class="nav-link text-white" runat="server" href="~/Account/Login">
+                                        <h4><i class="fas fa-sign-in-alt"></i> Ingresar</h4>
+                                    </a>
+                                </li>
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
+                                <li>
+                                    <a href="~/Default.aspx" runat="server" class="nav-link text-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                                            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                                        </svg>
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="#" runat="server" class="nav-link text-white dropdown-toggle" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-kanban" viewBox="0 0 16 16">
+                                            <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h11zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11z" />
+                                            <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3z" />
+                                        </svg>
+                                        Sennova
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Business/frmProyecto.aspx">Nuevo</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Business/frmDatosProyectos.aspx">Mis Proyectos</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="#" runat="server" class="nav-link text-white dropdown-toggle" id="A4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z" />
+                                        </svg>
+                                        Gestión Operativa
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="#" runat="server" class="nav-link text-white dropdown-toggle" id="A2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-ruled" viewBox="0 0 16 16">
+                                            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V9H3V2a1 1 0 0 1 1-1h5.5v2zM3 12v-2h2v2H3zm0 1h2v2H4a1 1 0 0 1-1-1v-1zm3 2v-2h7v1a1 1 0 0 1-1 1H6zm7-3H6v-2h7v2z" />
+                                        </svg>
+                                        Gestión Documental
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Documents/frmDocumentos.aspx">Repositorio</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="#" runat="server" class="nav-link text-white dropdown-toggle" id="A3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
+                                            <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
+                                        </svg>
+                                        Equipos
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Equipment/frmEquipoComputo.aspx">Equipos Cómputo</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Equipment/frmEquipotecnico.aspx">Equipos Técnicos</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="#" runat="server" class="nav-link text-white dropdown-toggle" id="A1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
+                                            <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z" />
+                                            <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117zM11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5zM4 1.934V15h6V1.077l-6 .857z" />
+                                        </svg>
+                                        Ingresos
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li>
+                                            <a class="dropdown-item" runat="server" href="~/Views/GetInto/frmIngresos.aspx">Visitante</a>
+                                            <a class="dropdown-item" runat="server" href="~/Views/GetInto/frmRegistrosIngresos.aspx">Control de Acceso</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                                            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                                            <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                                        </svg>
+                                        Configuraciones
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmEmpresa.aspx">Empresa</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmSectorEconomico.aspx">Sector Económico</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmProgramaFormacion.aspx">Programa Formación</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmTipoVisitante.aspx">Tipos de Visitante</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmTipoAreaTecnica.aspx">Tipos de Area Tecnica</a>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmRubro.aspx">Rubro</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmRegion.aspx">Region</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmRegional.aspx">Regional</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmCentroFormacion.aspx">Centros de Formación</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmLineaProgramatica.aspx">Lineas Programaticas</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmAreaConocimiento.aspx">Areas Conocimiento</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmRedConocimientoSectorial.aspx">Red de Conocimiento Sectorial</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmTipoProducto.aspx">Tipos de Producto</a>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmDocumento.aspx">Documentos</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmProcedimiento.aspx">Procedimientos</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmProceso.aspx">Procesos</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmMacroProceso.aspx">MacroProcesos</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmTiposDocumentos.aspx">Tipos de Documentos</a>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmSoftware.aspx">Software</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmTipoEquipo.aspx">Tipos de Equipos</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmAccesorios.aspx">Accesorios</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmImpresora.aspx">Impresoras</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmTipoLicencia.aspx">Tipos de Licencias</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmTipoPatron.aspx">Tipos de Patrones</a>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmPersona.aspx">Personal</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmRolSennova.aspx">Roles Sennova</a>
+                                            <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmTipoDocumento.aspx">Tipos de Identificación</a>
+                                            <a runat="server" class="dropdown-item" href="~/Account/Register.aspx">Registrar Usuarios</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <%--<li>
+                                    <a runat="server" href="~/Account/Manage" title="Manage your account">Hola. <%: Context.User.Identity.GetUserName()  %> !</a>
+                                </li>--%>
+                                <li>
+                                    <a href="~/" logoutpageurl="~/" onloggingout="Unnamed_LoggingOut" runat="server" class="nav-link text-white" id="A5" role="button" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z" />
+                                            <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                                        </svg>
+                                        Salir
+                                        <%--<asp:LoginStatus class="nav-link text-white" runat="server" LogoutAction="Redirect" LogoutText="Salir" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />--%>
+                                    </a>
+                                </li>
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <br />
+            <br />
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <div class="row">
+                    <div class="col-md-3 text-center">
+                        <img class="img-fluid" src="/img/sena.jpeg" width="45%">
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <br>
+                        <h4>
+                            <b>Servicio Nacional de
+                                Aprendizaje SENA
+                                <br>
+                                Centro de la Industria, la Empresa y los Servicios<br>
+                                Cra 9 # 68 50 - Sede Industria<br>
+                                © SENA <%: DateTime.Now.Year %> | Todos los derechos reservados
+                            </b>
+                        </h4>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img class="img-fluid" src="/img/sennova.png" width="75%">
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </form>
+    <a href="https://api.whatsapp.com/send?phone=573105656925" target="_blank" style="position: fixed; width: 55px; height: 55px; bottom: 30px; right: 30px; border-radius: 50px; color: #fff; background: #0df053; font-size: 30px; box-shadow: 0px 1px 10px rgba(0,0,0,0.3); z-index: 100; text-align: center;"><i class="fab fa-whatsapp" style="margin-top: 12px;margin-left: 2px;"></i></a>
+</body>
+</html>

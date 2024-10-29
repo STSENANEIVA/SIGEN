@@ -1,0 +1,1296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DB_SENNOVA" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="DB_SENNOVAContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblProyecto" EntityType="DB_SENNOVA.tblProyecto" />
+    <EntitySet Name="tblRegion" EntityType="DB_SENNOVA.tblRegion" />
+    <EntitySet Name="tblRegional" EntityType="DB_SENNOVA.tblRegional" />
+    <EntitySet Name="tblCentroFormacion" EntityType="DB_SENNOVA.tblCentroFormacion" />
+    <EntitySet Name="tblLineaProgramatica" EntityType="DB_SENNOVA.tblLineaProgramatica" />
+    <EntitySet Name="tblAreaConocimiento" EntityType="DB_SENNOVA.tblAreaConocimiento" />
+    <EntitySet Name="tblRolSennova" EntityType="DB_SENNOVA.tblRolSennova" />
+    <AssociationSet Name="tblProyectotblCentroFormacion" Association="DB_SENNOVA.tblProyectotblCentroFormacion">
+      <End Role="tblProyecto" EntitySet="tblProyecto" />
+      <End Role="tblCentroFormacion" EntitySet="tblCentroFormacion" />
+    </AssociationSet>
+    <AssociationSet Name="tblProyectotblLineaProgramatica" Association="DB_SENNOVA.tblProyectotblLineaProgramatica">
+      <End Role="tblProyecto" EntitySet="tblProyecto" />
+      <End Role="tblLineaProgramatica" EntitySet="tblLineaProgramatica" />
+    </AssociationSet>
+    <EntitySet Name="tblRedConocimientoSectorial" EntityType="DB_SENNOVA.tblRedConocimientoSectorial" />
+    <AssociationSet Name="tblProyectotblRedConocimientoSectorial" Association="DB_SENNOVA.tblProyectotblRedConocimientoSectorial">
+      <End Role="tblProyecto" EntitySet="tblProyecto" />
+      <End Role="tblRedConocimientoSectorial" EntitySet="tblRedConocimientoSectorial" />
+    </AssociationSet>
+    <AssociationSet Name="tblProyectotblAreaConocimiento" Association="DB_SENNOVA.tblProyectotblAreaConocimiento">
+      <End Role="tblProyecto" EntitySet="tblProyecto" />
+      <End Role="tblAreaConocimiento" EntitySet="tblAreaConocimiento" />
+    </AssociationSet>
+    <EntitySet Name="tblPersona" EntityType="DB_SENNOVA.tblPersona" />
+    <EntitySet Name="tblTipoDocumento" EntityType="DB_SENNOVA.tblTipoDocumento" />
+    <AssociationSet Name="tblPersonatblTipoDocumento" Association="DB_SENNOVA.tblPersonatblTipoDocumento">
+      <End Role="tblPersona" EntitySet="tblPersona" />
+      <End Role="tblTipoDocumento" EntitySet="tblTipoDocumento" />
+    </AssociationSet>
+    <EntitySet Name="tblObjetivoEspecifico" EntityType="DB_SENNOVA.tblObjetivoEspecifico" />
+    <EntitySet Name="tblActividad" EntityType="DB_SENNOVA.tblActividad" />
+    <EntitySet Name="tblProducto" EntityType="DB_SENNOVA.tblProducto" />
+    <EntitySet Name="tblTipoProducto" EntityType="DB_SENNOVA.tblTipoProducto" />
+    <AssociationSet Name="tblProductotblTipoProducto" Association="DB_SENNOVA.tblProductotblTipoProducto">
+      <End Role="tblProducto" EntitySet="tblProducto" />
+      <End Role="tblTipoProducto" EntitySet="tblTipoProducto" />
+    </AssociationSet>
+    <AssociationSet Name="tblObjetivoEspecificotblProyecto" Association="DB_SENNOVA.tblObjetivoEspecificotblProyecto">
+      <End Role="tblObjetivoEspecifico" EntitySet="tblObjetivoEspecifico" />
+      <End Role="tblProyecto" EntitySet="tblProyecto" />
+    </AssociationSet>
+    <AssociationSet Name="tblProductotblActividad" Association="DB_SENNOVA.tblProductotblActividad">
+      <End Role="tblProducto" EntitySet="tblProducto" />
+      <End Role="tblActividad" EntitySet="tblActividad" />
+    </AssociationSet>
+    <EntitySet Name="tblAvanceProyecto" EntityType="DB_SENNOVA.tblAvanceProyecto" />
+    <AssociationSet Name="tblAvanceProyectotblActividad" Association="DB_SENNOVA.tblAvanceProyectotblActividad">
+      <End Role="tblAvanceProyecto" EntitySet="tblAvanceProyecto" />
+      <End Role="tblActividad" EntitySet="tblActividad" />
+    </AssociationSet>
+    <AssociationSet Name="tblRegionaltblRegion" Association="DB_SENNOVA.tblRegionaltblRegion">
+      <End Role="tblRegional" EntitySet="tblRegional" />
+      <End Role="tblRegion" EntitySet="tblRegion" />
+    </AssociationSet>
+    <AssociationSet Name="tblCentroFormaciontblRegional" Association="DB_SENNOVA.tblCentroFormaciontblRegional">
+      <End Role="tblCentroFormacion" EntitySet="tblCentroFormacion" />
+      <End Role="tblRegional" EntitySet="tblRegional" />
+    </AssociationSet>
+    <AssociationSet Name="tblActividadtblObjetivoEspecifico" Association="DB_SENNOVA.tblActividadtblObjetivoEspecifico">
+      <End Role="tblActividad" EntitySet="tblActividad" />
+      <End Role="tblObjetivoEspecifico" EntitySet="tblObjetivoEspecifico" />
+    </AssociationSet>
+    <EntitySet Name="tblRubro" EntityType="DB_SENNOVA.tblRubro" />
+    <EntitySet Name="tblProyectoRubro" EntityType="DB_SENNOVA.tblProyectoRubro" />
+    <AssociationSet Name="tblProyectoRubrotblProyecto" Association="DB_SENNOVA.tblProyectoRubrotblProyecto">
+      <End Role="tblProyectoRubro" EntitySet="tblProyectoRubro" />
+      <End Role="tblProyecto" EntitySet="tblProyecto" />
+    </AssociationSet>
+    <AssociationSet Name="tblProyectoRubrotblRubro" Association="DB_SENNOVA.tblProyectoRubrotblRubro">
+      <End Role="tblProyectoRubro" EntitySet="tblProyectoRubro" />
+      <End Role="tblRubro" EntitySet="tblRubro" />
+    </AssociationSet>
+    <EntitySet Name="tblIngreso" EntityType="DB_SENNOVA.tblIngreso" />
+    <EntitySet Name="tblAreaTecnica" EntityType="DB_SENNOVA.tblAreaTecnica" />
+    <EntitySet Name="tblTipoAreaTecnica" EntityType="DB_SENNOVA.tblTipoAreaTecnica" />
+    <EntitySet Name="tblServicio" EntityType="DB_SENNOVA.tblServicio" />
+    <AssociationSet Name="tblAreaTecnicatblTipoAreaTecnica" Association="DB_SENNOVA.tblAreaTecnicatblTipoAreaTecnica">
+      <End Role="tblAreaTecnica" EntitySet="tblAreaTecnica" />
+      <End Role="tblTipoAreaTecnica" EntitySet="tblTipoAreaTecnica" />
+    </AssociationSet>
+    <AssociationSet Name="tblServiciotblAreaTecnica" Association="DB_SENNOVA.tblServiciotblAreaTecnica">
+      <End Role="tblServicio" EntitySet="tblServicio" />
+      <End Role="tblAreaTecnica" EntitySet="tblAreaTecnica" />
+    </AssociationSet>
+    <EntitySet Name="tblIngresosAreasTecnicas" EntityType="DB_SENNOVA.tblIngresosAreasTecnicas" />
+    <AssociationSet Name="tblIngresosAreasTecnicastblAreaTecnica" Association="DB_SENNOVA.tblIngresosAreasTecnicastblAreaTecnica">
+      <End Role="tblIngresosAreasTecnicas" EntitySet="tblIngresosAreasTecnicas" />
+      <End Role="tblAreaTecnica" EntitySet="tblAreaTecnica" />
+    </AssociationSet>
+    <AssociationSet Name="tblIngresosAreasTecnicastblIngreso" Association="DB_SENNOVA.tblIngresosAreasTecnicastblIngreso">
+      <End Role="tblIngresosAreasTecnicas" EntitySet="tblIngresosAreasTecnicas" />
+      <End Role="tblIngreso" EntitySet="tblIngreso" />
+    </AssociationSet>
+    <EntitySet Name="tblProgramaFormacion" EntityType="DB_SENNOVA.tblProgramaFormacion" />
+    <EntitySet Name="tblEmpleado" EntityType="DB_SENNOVA.tblEmpleado" />
+    <AssociationSet Name="tblProyectotblEmpleado" Association="DB_SENNOVA.tblProyectotblEmpleado">
+      <End Role="tblProyecto" EntitySet="tblProyecto" />
+      <End Role="tblEmpleado" EntitySet="tblEmpleado" />
+    </AssociationSet>
+    <AssociationSet Name="tblEmpleadotblRolSennova" Association="DB_SENNOVA.tblEmpleadotblRolSennova">
+      <End Role="tblEmpleado" EntitySet="tblEmpleado" />
+      <End Role="tblRolSennova" EntitySet="tblRolSennova" />
+    </AssociationSet>
+    <EntitySet Name="tblVisitante" EntityType="DB_SENNOVA.tblVisitante" />
+    <EntitySet Name="tblTipoVisitante" EntityType="DB_SENNOVA.tblTipoVisitante" />
+    <AssociationSet Name="tblVisitantetblTipoVisitante" Association="DB_SENNOVA.tblVisitantetblTipoVisitante">
+      <End Role="tblVisitante" EntitySet="tblVisitante" />
+      <End Role="tblTipoVisitante" EntitySet="tblTipoVisitante" />
+    </AssociationSet>
+    <AssociationSet Name="tblIngresotblVisitante" Association="DB_SENNOVA.tblIngresotblVisitante">
+      <End Role="tblIngreso" EntitySet="tblIngreso" />
+      <End Role="tblVisitante" EntitySet="tblVisitante" />
+    </AssociationSet>
+    <AssociationSet Name="tblIngresotblProgramaFormacion" Association="DB_SENNOVA.tblIngresotblProgramaFormacion">
+      <End Role="tblIngreso" EntitySet="tblIngreso" />
+      <End Role="tblProgramaFormacion" EntitySet="tblProgramaFormacion" />
+    </AssociationSet>
+    <EntitySet Name="tblEmpresa" EntityType="DB_SENNOVA.tblEmpresa" />
+    <AssociationSet Name="tblIngresotblEmpresa" Association="DB_SENNOVA.tblIngresotblEmpresa">
+      <End Role="tblIngreso" EntitySet="tblIngreso" />
+      <End Role="tblEmpresa" EntitySet="tblEmpresa" />
+    </AssociationSet>
+    <AssociationSet Name="tblAreaTecnicatblEmpleado" Association="DB_SENNOVA.tblAreaTecnicatblEmpleado">
+      <End Role="tblAreaTecnica" EntitySet="tblAreaTecnica" />
+      <End Role="tblEmpleado" EntitySet="tblEmpleado" />
+    </AssociationSet>
+    <EntitySet Name="tblSectorEconomico" EntityType="DB_SENNOVA.tblSectorEconomico" />
+    <AssociationSet Name="tblEmpresatblSectorEconomico" Association="DB_SENNOVA.tblEmpresatblSectorEconomico">
+      <End Role="tblEmpresa" EntitySet="tblEmpresa" />
+      <End Role="tblSectorEconomico" EntitySet="tblSectorEconomico" />
+    </AssociationSet>
+    <AssociationSet Name="tblVisitantetblPersona" Association="DB_SENNOVA.tblVisitantetblPersona">
+      <End Role="tblVisitante" EntitySet="tblVisitante" />
+      <End Role="tblPersona" EntitySet="tblPersona" />
+    </AssociationSet>
+    <AssociationSet Name="tblEmpleadotblPersona" Association="DB_SENNOVA.tblEmpleadotblPersona">
+      <End Role="tblEmpleado" EntitySet="tblEmpleado" />
+      <End Role="tblPersona" EntitySet="tblPersona" />
+    </AssociationSet>
+    <AssociationSet Name="tblIngresotblEmpleado" Association="DB_SENNOVA.tblIngresotblEmpleado">
+      <End Role="tblIngreso" EntitySet="tblIngreso" />
+      <End Role="tblEmpleado" EntitySet="tblEmpleado" />
+    </AssociationSet>
+    <EntitySet Name="tblDocumento" EntityType="DB_SENNOVA.tblDocumento" />
+    <EntitySet Name="tblTiposDocumentos" EntityType="DB_SENNOVA.tblTiposDocumentos" />
+    <EntitySet Name="tblMacroProcesos" EntityType="DB_SENNOVA.tblMacroProcesos" />
+    <EntitySet Name="tblProcesos" EntityType="DB_SENNOVA.tblProcesos" />
+    <EntitySet Name="tblProcedimiento" EntityType="DB_SENNOVA.tblProcedimiento" />
+    <AssociationSet Name="tblDocumentotblTiposDocumentos" Association="DB_SENNOVA.tblDocumentotblTiposDocumentos">
+      <End Role="tblDocumento" EntitySet="tblDocumento" />
+      <End Role="tblTiposDocumentos" EntitySet="tblTiposDocumentos" />
+    </AssociationSet>
+    <EntitySet Name="tblDetallesDocumento" EntityType="DB_SENNOVA.tblDetallesDocumento" />
+    <AssociationSet Name="tblDetallesDocumentotblDocumento" Association="DB_SENNOVA.tblDetallesDocumentotblDocumento">
+      <End Role="tblDetallesDocumento" EntitySet="tblDetallesDocumento" />
+      <End Role="tblDocumento" EntitySet="tblDocumento" />
+    </AssociationSet>
+    <AssociationSet Name="tblDocumentotblProcedimiento" Association="DB_SENNOVA.tblDocumentotblProcedimiento">
+      <End Role="tblDocumento" EntitySet="tblDocumento" />
+      <End Role="tblProcedimiento" EntitySet="tblProcedimiento" />
+    </AssociationSet>
+    <AssociationSet Name="tblDetallesDocumentotblEmpleado" Association="DB_SENNOVA.tblDetallesDocumentotblEmpleado">
+      <End Role="tblDetallesDocumento" EntitySet="tblDetallesDocumento" />
+      <End Role="tblEmpleado" EntitySet="tblEmpleado" />
+    </AssociationSet>
+    <AssociationSet Name="tblDetallesDocumentotblEmpleado1" Association="DB_SENNOVA.tblDetallesDocumentotblEmpleado1">
+      <End Role="tblDetallesDocumento" EntitySet="tblDetallesDocumento" />
+      <End Role="tblEmpleado" EntitySet="tblEmpleado" />
+    </AssociationSet>
+    <AssociationSet Name="tblDetallesDocumentotblEmpleado2" Association="DB_SENNOVA.tblDetallesDocumentotblEmpleado2">
+      <End Role="tblDetallesDocumento" EntitySet="tblDetallesDocumento" />
+      <End Role="tblEmpleado" EntitySet="tblEmpleado" />
+    </AssociationSet>
+    <AssociationSet Name="tblProcedimientotblProcesos" Association="DB_SENNOVA.tblProcedimientotblProcesos">
+      <End Role="tblProcedimiento" EntitySet="tblProcedimiento" />
+      <End Role="tblProcesos" EntitySet="tblProcesos" />
+    </AssociationSet>
+    <AssociationSet Name="tblProcesostblMacroProcesos" Association="DB_SENNOVA.tblProcesostblMacroProcesos">
+      <End Role="tblProcesos" EntitySet="tblProcesos" />
+      <End Role="tblMacroProcesos" EntitySet="tblMacroProcesos" />
+    </AssociationSet>
+    <EntitySet Name="tblImpresora" EntityType="DB_SENNOVA.tblImpresora" />
+    <EntitySet Name="tblSoftware" EntityType="DB_SENNOVA.tblSoftware" />
+    <EntitySet Name="tblTipoLicencia" EntityType="DB_SENNOVA.tblTipoLicencia" />
+    <AssociationSet Name="tblSoftwaretblTipoLicencia" Association="DB_SENNOVA.tblSoftwaretblTipoLicencia">
+      <End Role="tblSoftware" EntitySet="tblSoftware" />
+      <End Role="tblTipoLicencia" EntitySet="tblTipoLicencia" />
+    </AssociationSet>
+    <EntitySet Name="tblTipoEquipo" EntityType="DB_SENNOVA.tblTipoEquipo" />
+    <EntitySet Name="tblEquipo" EntityType="DB_SENNOVA.tblEquipo" />
+    <AssociationSet Name="tblEquipotblTipoEquipo" Association="DB_SENNOVA.tblEquipotblTipoEquipo">
+      <End Role="tblEquipo" EntitySet="tblEquipo" />
+      <End Role="tblTipoEquipo" EntitySet="tblTipoEquipo" />
+    </AssociationSet>
+    <EntitySet Name="tblEquipoSoftware" EntityType="DB_SENNOVA.tblEquipoSoftware" />
+    <AssociationSet Name="tblEquipoSoftwaretblSoftware" Association="DB_SENNOVA.tblEquipoSoftwaretblSoftware">
+      <End Role="tblEquipoSoftware" EntitySet="tblEquipoSoftware" />
+      <End Role="tblSoftware" EntitySet="tblSoftware" />
+    </AssociationSet>
+    <EntitySet Name="tblCalibracion" EntityType="DB_SENNOVA.tblCalibracion" />
+    <EntitySet Name="tblMantenimiento" EntityType="DB_SENNOVA.tblMantenimiento" />
+    <EntitySet Name="tblMantenimientoEuipo" EntityType="DB_SENNOVA.tblMantenimientoEquipo" />
+    <AssociationSet Name="tblMantenimientoEuipotblEquipo" Association="DB_SENNOVA.tblMantenimientoEuipotblEquipo">
+      <End Role="tblMantenimientoEuipo" EntitySet="tblMantenimientoEuipo" />
+      <End Role="tblEquipo" EntitySet="tblEquipo" />
+    </AssociationSet>
+    <AssociationSet Name="tblMantenimientoEuipotblMantenimiento" Association="DB_SENNOVA.tblMantenimientoEuipotblMantenimiento">
+      <End Role="tblMantenimientoEuipo" EntitySet="tblMantenimientoEuipo" />
+      <End Role="tblMantenimiento" EntitySet="tblMantenimiento" />
+    </AssociationSet>
+    <EntitySet Name="tblCalibracionEquipo" EntityType="DB_SENNOVA.tblCalibracionEquipo" />
+    <AssociationSet Name="tblCalibracionEquipotblCalibracion" Association="DB_SENNOVA.tblCalibracionEquipotblCalibracion">
+      <End Role="tblCalibracionEquipo" EntitySet="tblCalibracionEquipo" />
+      <End Role="tblCalibracion" EntitySet="tblCalibracion" />
+    </AssociationSet>
+    <AssociationSet Name="tblCalibracionEquipotblEquipo" Association="DB_SENNOVA.tblCalibracionEquipotblEquipo">
+      <End Role="tblCalibracionEquipo" EntitySet="tblCalibracionEquipo" />
+      <End Role="tblEquipo" EntitySet="tblEquipo" />
+    </AssociationSet>
+    <AssociationSet Name="tblEquipotblEmpleado" Association="DB_SENNOVA.tblEquipotblEmpleado">
+      <End Role="tblEquipo" EntitySet="tblEquipo" />
+      <End Role="tblEmpleado" EntitySet="tblEmpleado" />
+    </AssociationSet>
+    <AssociationSet Name="tblMantenimientotblEmpleado" Association="DB_SENNOVA.tblMantenimientotblEmpleado">
+      <End Role="tblMantenimiento" EntitySet="tblMantenimiento" />
+      <End Role="tblEmpleado" EntitySet="tblEmpleado" />
+    </AssociationSet>
+    <AssociationSet Name="tblEmpleadotblMantenimiento" Association="DB_SENNOVA.tblEmpleadotblMantenimiento">
+      <End Role="tblMantenimiento" EntitySet="tblMantenimiento" />
+      <End Role="tblEmpleado" EntitySet="tblEmpleado" />
+    </AssociationSet>
+    <AssociationSet Name="tblEquipotblAreaTecnica" Association="DB_SENNOVA.tblEquipotblAreaTecnica">
+      <End Role="tblEquipo" EntitySet="tblEquipo" />
+      <End Role="tblAreaTecnica" EntitySet="tblAreaTecnica" />
+    </AssociationSet>
+    <EntitySet Name="tblComputo" EntityType="DB_SENNOVA.tblComputo" />
+    <AssociationSet Name="tblComputotblEquipo" Association="DB_SENNOVA.tblComputotblEquipo">
+      <End Role="tblComputo" EntitySet="tblComputo" />
+      <End Role="tblEquipo" EntitySet="tblEquipo" />
+    </AssociationSet>
+    <AssociationSet Name="tblComputotblImpresora" Association="DB_SENNOVA.tblComputotblImpresora">
+      <End Role="tblComputo" EntitySet="tblComputo" />
+      <End Role="tblImpresora" EntitySet="tblImpresora" />
+    </AssociationSet>
+    <AssociationSet Name="tblEquipoSoftwaretblComputo" Association="DB_SENNOVA.tblEquipoSoftwaretblComputo">
+      <End Role="tblEquipoSoftware" EntitySet="tblEquipoSoftware" />
+      <End Role="tblComputo" EntitySet="tblComputo" />
+    </AssociationSet>
+    <EntitySet Name="tblEquipoTecnico" EntityType="DB_SENNOVA.tblEquipoTecnico" />
+    <AssociationSet Name="tblEquipoTecnicotblEquipo" Association="DB_SENNOVA.tblEquipoTecnicotblEquipo">
+      <End Role="tblEquipoTecnico" EntitySet="tblEquipoTecnico" />
+      <End Role="tblEquipo" EntitySet="tblEquipo" />
+    </AssociationSet>
+    <EntitySet Name="tblTipoPatron" EntityType="DB_SENNOVA.tblTipoPatron" />
+    <AssociationSet Name="tblEquipoTecnicotblTipoPatron" Association="DB_SENNOVA.tblEquipoTecnicotblTipoPatron">
+      <End Role="tblEquipoTecnico" EntitySet="tblEquipoTecnico" />
+      <End Role="tblTipoPatron" EntitySet="tblTipoPatron" />
+    </AssociationSet>
+    <EntitySet Name="tblAccesorios" EntityType="DB_SENNOVA.tblAccesorios" />
+    <EntitySet Name="tblEquipoAccesorio" EntityType="DB_SENNOVA.tblEquipoAccesorio" />
+    <AssociationSet Name="tblEquipoAccesoriotblEquipo" Association="DB_SENNOVA.tblEquipoAccesoriotblEquipo">
+      <End Role="tblEquipoAccesorio" EntitySet="tblEquipoAccesorio" />
+      <End Role="tblEquipo" EntitySet="tblEquipo" />
+    </AssociationSet>
+    <AssociationSet Name="tblEquipoAccesoriotblAccesorios" Association="DB_SENNOVA.tblEquipoAccesoriotblAccesorios">
+      <End Role="tblEquipoAccesorio" EntitySet="tblEquipoAccesorio" />
+      <End Role="tblAccesorios" EntitySet="tblAccesorios" />
+    </AssociationSet>
+    <EntitySet Name="C__MigrationHistory" EntityType="DB_SENNOVA.C__MigrationHistory" />
+    <EntitySet Name="AspNetRoles" EntityType="DB_SENNOVA.AspNetRoles" />
+    <EntitySet Name="AspNetUserClaims" EntityType="DB_SENNOVA.AspNetUserClaims" />
+    <EntitySet Name="AspNetUserLogins" EntityType="DB_SENNOVA.AspNetUserLogins" />
+    <EntitySet Name="AspNetUsers" EntityType="DB_SENNOVA.AspNetUsers" />
+    <EntitySet Name="tblDetallesDocumentoSet" EntityType="DB_SENNOVA.tblDetallesDocumentoSet" />
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="DB_SENNOVA.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="DB_SENNOVA.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDetallesDocumentotblDocumento" Association="DB_SENNOVA.FK_tblDetallesDocumentotblDocumento">
+      <End Role="tblDocumento" EntitySet="tblDocumento" />
+      <End Role="tblDetallesDocumentoSet" EntitySet="tblDetallesDocumentoSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDetallesDocumentotblEmpleado" Association="DB_SENNOVA.FK_tblDetallesDocumentotblEmpleado">
+      <End Role="tblEmpleado" EntitySet="tblEmpleado" />
+      <End Role="tblDetallesDocumentoSet" EntitySet="tblDetallesDocumentoSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDetallesDocumentotblEmpleado1" Association="DB_SENNOVA.FK_tblDetallesDocumentotblEmpleado1">
+      <End Role="tblEmpleado" EntitySet="tblEmpleado" />
+      <End Role="tblDetallesDocumentoSet" EntitySet="tblDetallesDocumentoSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDetallesDocumentotblEmpleado2" Association="DB_SENNOVA.FK_tblDetallesDocumentotblEmpleado2">
+      <End Role="tblEmpleado" EntitySet="tblEmpleado" />
+      <End Role="tblDetallesDocumentoSet" EntitySet="tblDetallesDocumentoSet" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles" Association="DB_SENNOVA.AspNetUserRoles">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tblProyecto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="tblCentroFormacion" Relationship="DB_SENNOVA.tblProyectotblCentroFormacion" FromRole="tblProyecto" ToRole="tblCentroFormacion" />
+    <NavigationProperty Name="tblLineaProgramatica" Relationship="DB_SENNOVA.tblProyectotblLineaProgramatica" FromRole="tblProyecto" ToRole="tblLineaProgramatica" />
+    <NavigationProperty Name="tblRedConocimientoSectorial" Relationship="DB_SENNOVA.tblProyectotblRedConocimientoSectorial" FromRole="tblProyecto" ToRole="tblRedConocimientoSectorial" />
+    <NavigationProperty Name="tblAreaConocimiento" Relationship="DB_SENNOVA.tblProyectotblAreaConocimiento" FromRole="tblProyecto" ToRole="tblAreaConocimiento" />
+    <NavigationProperty Name="tblEmpleado" Relationship="DB_SENNOVA.tblProyectotblEmpleado" FromRole="tblProyecto" ToRole="tblEmpleado" />
+    <Property Name="TituloProyecto" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CodigoSGPS" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="AnoEjecucion" Type="Int16" Nullable="false" />
+    <Property Name="FechaDiligenciamiento" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ObjetivoGeneral" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="AsignacionInicial" Type="Decimal" Nullable="false" Scale="2" Precision="18" />
+    <Property Name="TotalAdiciones" Type="Decimal" Nullable="true" Precision="18" Scale="2" />
+    <Property Name="TotalDisminucionesCentralizaciones" Type="Decimal" Nullable="true" Precision="18" Scale="2" />
+    <Property Name="TotalEjecutado" Type="Decimal" Nullable="true" Precision="18" Scale="2" />
+    <Property Name="PresupuestoFinal" Type="Decimal" Nullable="true" Precision="18" Scale="2" />
+    <NavigationProperty Name="lstObjetivoEspecificos" Relationship="DB_SENNOVA.tblObjetivoEspecificotblProyecto" FromRole="tblProyecto" ToRole="tblObjetivoEspecifico" />
+    <NavigationProperty Name="lstProyectoRubros" Relationship="DB_SENNOVA.tblProyectoRubrotblProyecto" FromRole="tblProyecto" ToRole="tblProyectoRubro" />
+  </EntityType>
+  <EntityType Name="tblRegion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="lstRegionales" Relationship="DB_SENNOVA.tblRegionaltblRegion" FromRole="tblRegion" ToRole="tblRegional" />
+  </EntityType>
+  <EntityType Name="tblRegional">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblRegion" Relationship="DB_SENNOVA.tblRegionaltblRegion" FromRole="tblRegional" ToRole="tblRegion" />
+    <NavigationProperty Name="lstCentrosFormacion" Relationship="DB_SENNOVA.tblCentroFormaciontblRegional" FromRole="tblRegional" ToRole="tblCentroFormacion" />
+  </EntityType>
+  <EntityType Name="tblCentroFormacion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblRegional" Relationship="DB_SENNOVA.tblCentroFormaciontblRegional" FromRole="tblCentroFormacion" ToRole="tblRegional" />
+    <NavigationProperty Name="lstProyectos" Relationship="DB_SENNOVA.tblProyectotblCentroFormacion" FromRole="tblCentroFormacion" ToRole="tblProyecto" />
+  </EntityType>
+  <EntityType Name="tblLineaProgramatica">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="lstProyectos" Relationship="DB_SENNOVA.tblProyectotblLineaProgramatica" FromRole="tblLineaProgramatica" ToRole="tblProyecto" />
+  </EntityType>
+  <EntityType Name="tblAreaConocimiento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="lstProyectos" Relationship="DB_SENNOVA.tblProyectotblAreaConocimiento" FromRole="tblAreaConocimiento" ToRole="tblProyecto" />
+  </EntityType>
+  <EntityType Name="tblRolSennova">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="lstEmpleados" Relationship="DB_SENNOVA.tblEmpleadotblRolSennova" FromRole="tblRolSennova" ToRole="tblEmpleado" />
+  </EntityType>
+  <Association Name="tblProyectotblCentroFormacion">
+    <End Type="DB_SENNOVA.tblProyecto" Role="tblProyecto" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblCentroFormacion" Role="tblCentroFormacion" Multiplicity="1" />
+  </Association>
+  <Association Name="tblProyectotblLineaProgramatica">
+    <End Type="DB_SENNOVA.tblProyecto" Role="tblProyecto" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblLineaProgramatica" Role="tblLineaProgramatica" Multiplicity="1" />
+  </Association>
+  <EntityType Name="tblRedConocimientoSectorial">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="lstProyectos" Relationship="DB_SENNOVA.tblProyectotblRedConocimientoSectorial" FromRole="tblRedConocimientoSectorial" ToRole="tblProyecto" />
+  </EntityType>
+  <Association Name="tblProyectotblRedConocimientoSectorial">
+    <End Type="DB_SENNOVA.tblProyecto" Role="tblProyecto" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblRedConocimientoSectorial" Role="tblRedConocimientoSectorial" Multiplicity="1" />
+  </Association>
+  <Association Name="tblProyectotblAreaConocimiento">
+    <End Type="DB_SENNOVA.tblProyecto" Role="tblProyecto" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblAreaConocimiento" Role="tblAreaConocimiento" Multiplicity="1" />
+  </Association>
+  <EntityType Name="tblPersona">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblTipoDocumento" Relationship="DB_SENNOVA.tblPersonatblTipoDocumento" FromRole="tblPersona" ToRole="tblTipoDocumento" />
+    <Property Name="Nombres" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Apellidos" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="NumeroIdentificacion" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Telefono" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblTipoDocumento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="lstPersona" Relationship="DB_SENNOVA.tblPersonatblTipoDocumento" FromRole="tblTipoDocumento" ToRole="tblPersona" />
+  </EntityType>
+  <Association Name="tblPersonatblTipoDocumento">
+    <End Type="DB_SENNOVA.tblPersona" Role="tblPersona" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblTipoDocumento" Role="tblTipoDocumento" Multiplicity="1" />
+  </Association>
+  <EntityType Name="tblObjetivoEspecifico">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblProyecto" Relationship="DB_SENNOVA.tblObjetivoEspecificotblProyecto" FromRole="tblObjetivoEspecifico" ToRole="tblProyecto" />
+    <NavigationProperty Name="lstActividades" Relationship="DB_SENNOVA.tblActividadtblObjetivoEspecifico" FromRole="tblObjetivoEspecifico" ToRole="tblActividad" />
+  </EntityType>
+  <EntityType Name="tblActividad">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblObjetivoEspecifico" Relationship="DB_SENNOVA.tblActividadtblObjetivoEspecifico" FromRole="tblActividad" ToRole="tblObjetivoEspecifico" />
+    <NavigationProperty Name="lstProductos" Relationship="DB_SENNOVA.tblProductotblActividad" FromRole="tblActividad" ToRole="tblProducto" />
+    <NavigationProperty Name="lstAvanceProyectos" Relationship="DB_SENNOVA.tblAvanceProyectotblActividad" FromRole="tblActividad" ToRole="tblAvanceProyecto" />
+  </EntityType>
+  <EntityType Name="tblProducto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblTipoProducto" Relationship="DB_SENNOVA.tblProductotblTipoProducto" FromRole="tblProducto" ToRole="tblTipoProducto" />
+    <NavigationProperty Name="tblActividad" Relationship="DB_SENNOVA.tblProductotblActividad" FromRole="tblProducto" ToRole="tblActividad" />
+  </EntityType>
+  <EntityType Name="tblTipoProducto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="lstProductos" Relationship="DB_SENNOVA.tblProductotblTipoProducto" FromRole="tblTipoProducto" ToRole="tblProducto" />
+  </EntityType>
+  <Association Name="tblProductotblTipoProducto">
+    <End Type="DB_SENNOVA.tblProducto" Role="tblProducto" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblTipoProducto" Role="tblTipoProducto" Multiplicity="1" />
+  </Association>
+  <Association Name="tblObjetivoEspecificotblProyecto">
+    <End Type="DB_SENNOVA.tblObjetivoEspecifico" Role="tblObjetivoEspecifico" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblProyecto" Role="tblProyecto" Multiplicity="1" />
+  </Association>
+  <Association Name="tblProductotblActividad">
+    <End Type="DB_SENNOVA.tblProducto" Role="tblProducto" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblActividad" Role="tblActividad" Multiplicity="1" />
+  </Association>
+  <EntityType Name="tblAvanceProyecto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Mes" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Proyectado" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Ejecutado" Type="Decimal" Nullable="true" Precision="18" Scale="2" />
+    <Property Name="EjecutadoPresupuesto" Type="Decimal" Nullable="true" Precision="18" Scale="2" />
+    <Property Name="Adicion" Type="Decimal" Nullable="true" Precision="18" Scale="2" />
+    <Property Name="Disminucion" Type="Decimal" Nullable="true" Precision="18" Scale="2" />
+    <Property Name="Saldo" Type="Decimal" Nullable="true" Precision="18" Scale="2" />
+    <NavigationProperty Name="tblActividad" Relationship="DB_SENNOVA.tblAvanceProyectotblActividad" FromRole="tblAvanceProyecto" ToRole="tblActividad" />
+    <Property Name="Observaciones" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ObservacionesPresupuestales" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <Association Name="tblAvanceProyectotblActividad">
+    <End Type="DB_SENNOVA.tblAvanceProyecto" Role="tblAvanceProyecto" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblActividad" Role="tblActividad" Multiplicity="1" />
+  </Association>
+  <Association Name="tblRegionaltblRegion">
+    <End Type="DB_SENNOVA.tblRegional" Role="tblRegional" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblRegion" Role="tblRegion" Multiplicity="1" />
+  </Association>
+  <Association Name="tblCentroFormaciontblRegional">
+    <End Type="DB_SENNOVA.tblCentroFormacion" Role="tblCentroFormacion" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblRegional" Role="tblRegional" Multiplicity="1" />
+  </Association>
+  <Association Name="tblActividadtblObjetivoEspecifico">
+    <End Type="DB_SENNOVA.tblActividad" Role="tblActividad" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblObjetivoEspecifico" Role="tblObjetivoEspecifico" Multiplicity="1" />
+  </Association>
+  <EntityType Name="tblRubro">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="lstProyectoRubros" Relationship="DB_SENNOVA.tblProyectoRubrotblRubro" FromRole="tblRubro" ToRole="tblProyectoRubro" />
+  </EntityType>
+  <EntityType Name="tblProyectoRubro">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Objeto" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Valor" Type="Decimal" Nullable="true" Precision="18" Scale="2" />
+    <NavigationProperty Name="tblProyecto" Relationship="DB_SENNOVA.tblProyectoRubrotblProyecto" FromRole="tblProyectoRubro" ToRole="tblProyecto" />
+    <NavigationProperty Name="tblRubro" Relationship="DB_SENNOVA.tblProyectoRubrotblRubro" FromRole="tblProyectoRubro" ToRole="tblRubro" />
+  </EntityType>
+  <Association Name="tblProyectoRubrotblProyecto">
+    <End Type="DB_SENNOVA.tblProyectoRubro" Role="tblProyectoRubro" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblProyecto" Role="tblProyecto" Multiplicity="1" />
+  </Association>
+  <Association Name="tblProyectoRubrotblRubro">
+    <End Type="DB_SENNOVA.tblProyectoRubro" Role="tblProyectoRubro" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblRubro" Role="tblRubro" Multiplicity="1" />
+  </Association>
+  <EntityType Name="tblIngreso">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PoliticaDatos" Type="Boolean" />
+    <Property Name="Ficha" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblVisitante" Relationship="DB_SENNOVA.tblIngresotblVisitante" FromRole="tblIngreso" ToRole="tblVisitante" />
+    <NavigationProperty Name="tblEmpresa" Relationship="DB_SENNOVA.tblIngresotblEmpresa" FromRole="tblIngreso" ToRole="tblEmpresa" />
+    <NavigationProperty Name="tblProgramaFormacion" Relationship="DB_SENNOVA.tblIngresotblProgramaFormacion" FromRole="tblIngreso" ToRole="tblProgramaFormacion" />
+    <NavigationProperty Name="lstIngresosAreasTecnicas" Relationship="DB_SENNOVA.tblIngresosAreasTecnicastblIngreso" FromRole="tblIngreso" ToRole="tblIngresosAreasTecnicas" />
+    <NavigationProperty Name="tblEmpleado" Relationship="DB_SENNOVA.tblIngresotblEmpleado" FromRole="tblIngreso" ToRole="tblEmpleado" />
+  </EntityType>
+  <EntityType Name="tblAreaTecnica">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblTipoAreaTecnica" Relationship="DB_SENNOVA.tblAreaTecnicatblTipoAreaTecnica" FromRole="tblAreaTecnica" ToRole="tblTipoAreaTecnica" />
+    <NavigationProperty Name="tblEmpleado" Relationship="DB_SENNOVA.tblAreaTecnicatblEmpleado" FromRole="tblAreaTecnica" ToRole="tblEmpleado" />
+    <NavigationProperty Name="lstServicios" Relationship="DB_SENNOVA.tblServiciotblAreaTecnica" FromRole="tblAreaTecnica" ToRole="tblServicio" />
+    <NavigationProperty Name="lstIngresosAreasTecnicas" Relationship="DB_SENNOVA.tblIngresosAreasTecnicastblAreaTecnica" FromRole="tblAreaTecnica" ToRole="tblIngresosAreasTecnicas" />
+    <NavigationProperty Name="lstEquipos" Relationship="DB_SENNOVA.tblEquipotblAreaTecnica" FromRole="tblAreaTecnica" ToRole="tblEquipo" />
+  </EntityType>
+  <EntityType Name="tblTipoAreaTecnica">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="lstAreaTecnicas" Relationship="DB_SENNOVA.tblAreaTecnicatblTipoAreaTecnica" FromRole="tblTipoAreaTecnica" ToRole="tblAreaTecnica" />
+  </EntityType>
+  <EntityType Name="tblServicio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Requisitos" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Alcance" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Valor" Type="Decimal" Nullable="true" Precision="18" Scale="2" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblAreaTecnica" Relationship="DB_SENNOVA.tblServiciotblAreaTecnica" FromRole="tblServicio" ToRole="tblAreaTecnica" />
+  </EntityType>
+  <Association Name="tblAreaTecnicatblTipoAreaTecnica">
+    <End Type="DB_SENNOVA.tblAreaTecnica" Role="tblAreaTecnica" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblTipoAreaTecnica" Role="tblTipoAreaTecnica" Multiplicity="1" />
+  </Association>
+  <Association Name="tblServiciotblAreaTecnica">
+    <End Type="DB_SENNOVA.tblServicio" Role="tblServicio" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblAreaTecnica" Role="tblAreaTecnica" Multiplicity="1" />
+  </Association>
+  <EntityType Name="tblIngresosAreasTecnicas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="tblAreaTecnica" Relationship="DB_SENNOVA.tblIngresosAreasTecnicastblAreaTecnica" FromRole="tblIngresosAreasTecnicas" ToRole="tblAreaTecnica" />
+    <NavigationProperty Name="tblIngreso" Relationship="DB_SENNOVA.tblIngresosAreasTecnicastblIngreso" FromRole="tblIngresosAreasTecnicas" ToRole="tblIngreso" />
+  </EntityType>
+  <Association Name="tblIngresosAreasTecnicastblAreaTecnica">
+    <End Type="DB_SENNOVA.tblIngresosAreasTecnicas" Role="tblIngresosAreasTecnicas" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblAreaTecnica" Role="tblAreaTecnica" Multiplicity="1" />
+  </Association>
+  <Association Name="tblIngresosAreasTecnicastblIngreso">
+    <End Type="DB_SENNOVA.tblIngresosAreasTecnicas" Role="tblIngresosAreasTecnicas" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblIngreso" Role="tblIngreso" Multiplicity="1" />
+  </Association>
+  <EntityType Name="tblProgramaFormacion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="lstIngresos" Relationship="DB_SENNOVA.tblIngresotblProgramaFormacion" FromRole="tblProgramaFormacion" ToRole="tblIngreso" />
+  </EntityType>
+  <EntityType Name="tblEmpleado">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmailLaboral" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Telefono" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Ip" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblRolSennova" Relationship="DB_SENNOVA.tblEmpleadotblRolSennova" FromRole="tblEmpleado" ToRole="tblRolSennova" />
+    <NavigationProperty Name="tblPersona" Relationship="DB_SENNOVA.tblEmpleadotblPersona" FromRole="tblEmpleado" ToRole="tblPersona" />
+    <NavigationProperty Name="lstProyecto" Relationship="DB_SENNOVA.tblProyectotblEmpleado" FromRole="tblEmpleado" ToRole="tblProyecto" />
+    <NavigationProperty Name="lstAreaTecnicas" Relationship="DB_SENNOVA.tblAreaTecnicatblEmpleado" FromRole="tblEmpleado" ToRole="tblAreaTecnica" />
+    <NavigationProperty Name="lstIngresos" Relationship="DB_SENNOVA.tblIngresotblEmpleado" FromRole="tblEmpleado" ToRole="tblIngreso" />
+    <NavigationProperty Name="lstDetallesDocumentosSolicitados" Relationship="DB_SENNOVA.tblDetallesDocumentotblEmpleado" FromRole="tblEmpleado" ToRole="tblDetallesDocumento" />
+    <NavigationProperty Name="lstDetallesDocumentosRevisados" Relationship="DB_SENNOVA.tblDetallesDocumentotblEmpleado1" FromRole="tblEmpleado" ToRole="tblDetallesDocumento" />
+    <NavigationProperty Name="lstDetallesDocumentosAprovados" Relationship="DB_SENNOVA.tblDetallesDocumentotblEmpleado2" FromRole="tblEmpleado" ToRole="tblDetallesDocumento" />
+    <NavigationProperty Name="lstEquipos" Relationship="DB_SENNOVA.tblEquipotblEmpleado" FromRole="tblEmpleado" ToRole="tblEquipo" />
+    <NavigationProperty Name="lstMantenimientos" Relationship="DB_SENNOVA.tblMantenimientotblEmpleado" FromRole="tblEmpleado" ToRole="tblMantenimiento" />
+    <NavigationProperty Name="tblMantenimiento" Relationship="DB_SENNOVA.tblEmpleadotblMantenimiento" FromRole="tblEmpleado" ToRole="tblMantenimiento" />
+    <NavigationProperty Name="tblDetallesDocumentoSet" Relationship="DB_SENNOVA.FK_tblDetallesDocumentotblEmpleado" FromRole="tblEmpleado" ToRole="tblDetallesDocumentoSet" />
+    <NavigationProperty Name="tblDetallesDocumentoSet1" Relationship="DB_SENNOVA.FK_tblDetallesDocumentotblEmpleado1" FromRole="tblEmpleado" ToRole="tblDetallesDocumentoSet" />
+    <NavigationProperty Name="tblDetallesDocumentoSet2" Relationship="DB_SENNOVA.FK_tblDetallesDocumentotblEmpleado2" FromRole="tblEmpleado" ToRole="tblDetallesDocumentoSet" />
+  </EntityType>
+  <Association Name="tblProyectotblEmpleado">
+    <End Type="DB_SENNOVA.tblProyecto" Role="tblProyecto" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblEmpleado" Role="tblEmpleado" Multiplicity="1" />
+  </Association>
+  <Association Name="tblEmpleadotblRolSennova">
+    <End Type="DB_SENNOVA.tblEmpleado" Role="tblEmpleado" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblRolSennova" Role="tblRolSennova" Multiplicity="1" />
+  </Association>
+  <EntityType Name="tblVisitante">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="tblTipoVisitante" Relationship="DB_SENNOVA.tblVisitantetblTipoVisitante" FromRole="tblVisitante" ToRole="tblTipoVisitante" />
+    <NavigationProperty Name="tblPersona" Relationship="DB_SENNOVA.tblVisitantetblPersona" FromRole="tblVisitante" ToRole="tblPersona" />
+    <NavigationProperty Name="lstIngresos" Relationship="DB_SENNOVA.tblIngresotblVisitante" FromRole="tblVisitante" ToRole="tblIngreso" />
+  </EntityType>
+  <EntityType Name="tblTipoVisitante">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="lstVisitantes" Relationship="DB_SENNOVA.tblVisitantetblTipoVisitante" FromRole="tblTipoVisitante" ToRole="tblVisitante" />
+  </EntityType>
+  <Association Name="tblVisitantetblTipoVisitante">
+    <End Type="DB_SENNOVA.tblVisitante" Role="tblVisitante" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblTipoVisitante" Role="tblTipoVisitante" Multiplicity="1" />
+  </Association>
+  <Association Name="tblIngresotblVisitante">
+    <End Type="DB_SENNOVA.tblIngreso" Role="tblIngreso" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblVisitante" Role="tblVisitante" Multiplicity="1" />
+  </Association>
+  <Association Name="tblIngresotblProgramaFormacion">
+    <End Type="DB_SENNOVA.tblIngreso" Role="tblIngreso" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblProgramaFormacion" Role="tblProgramaFormacion" Multiplicity="0..1" />
+  </Association>
+  <EntityType Name="tblEmpresa">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RazonSocial" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nit" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Telefono" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="lstIngresos" Relationship="DB_SENNOVA.tblIngresotblEmpresa" FromRole="tblEmpresa" ToRole="tblIngreso" />
+    <NavigationProperty Name="tblSectorEconomico" Relationship="DB_SENNOVA.tblEmpresatblSectorEconomico" FromRole="tblEmpresa" ToRole="tblSectorEconomico" />
+  </EntityType>
+  <Association Name="tblIngresotblEmpresa">
+    <End Type="DB_SENNOVA.tblIngreso" Role="tblIngreso" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblEmpresa" Role="tblEmpresa" Multiplicity="1" />
+  </Association>
+  <Association Name="tblAreaTecnicatblEmpleado">
+    <End Type="DB_SENNOVA.tblAreaTecnica" Role="tblAreaTecnica" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblEmpleado" Role="tblEmpleado" Multiplicity="1" />
+  </Association>
+  <EntityType Name="tblSectorEconomico">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="lstEmpresas" Relationship="DB_SENNOVA.tblEmpresatblSectorEconomico" FromRole="tblSectorEconomico" ToRole="tblEmpresa" />
+  </EntityType>
+  <Association Name="tblEmpresatblSectorEconomico">
+    <End Type="DB_SENNOVA.tblEmpresa" Role="tblEmpresa" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblSectorEconomico" Role="tblSectorEconomico" Multiplicity="1" />
+  </Association>
+  <Association Name="tblVisitantetblPersona">
+    <End Type="DB_SENNOVA.tblVisitante" Role="tblVisitante" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblPersona" Role="tblPersona" Multiplicity="1" />
+  </Association>
+  <Association Name="tblEmpleadotblPersona">
+    <End Type="DB_SENNOVA.tblEmpleado" Role="tblEmpleado" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblPersona" Role="tblPersona" Multiplicity="1" />
+  </Association>
+  <Association Name="tblIngresotblEmpleado">
+    <End Type="DB_SENNOVA.tblIngreso" Role="tblIngreso" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblEmpleado" Role="tblEmpleado" Multiplicity="1" />
+  </Association>
+  <EntityType Name="tblDocumento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblTiposDocumentos" Relationship="DB_SENNOVA.tblDocumentotblTiposDocumentos" FromRole="tblDocumento" ToRole="tblTiposDocumentos" />
+    <NavigationProperty Name="tblProcedimiento" Relationship="DB_SENNOVA.tblDocumentotblProcedimiento" FromRole="tblDocumento" ToRole="tblProcedimiento" />
+    <NavigationProperty Name="lstDetallesDocumentos" Relationship="DB_SENNOVA.tblDetallesDocumentotblDocumento" FromRole="tblDocumento" ToRole="tblDetallesDocumento" />
+    <NavigationProperty Name="tblDetallesDocumentoSet" Relationship="DB_SENNOVA.FK_tblDetallesDocumentotblDocumento" FromRole="tblDocumento" ToRole="tblDetallesDocumentoSet" />
+  </EntityType>
+  <EntityType Name="tblTiposDocumentos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="lstDocumentos" Relationship="DB_SENNOVA.tblDocumentotblTiposDocumentos" FromRole="tblTiposDocumentos" ToRole="tblDocumento" />
+  </EntityType>
+  <EntityType Name="tblMacroProcesos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Icono" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Color" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="lstProcesos" Relationship="DB_SENNOVA.tblProcesostblMacroProcesos" FromRole="tblMacroProcesos" ToRole="tblProcesos" />
+  </EntityType>
+  <EntityType Name="tblProcesos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblMacroProcesos" Relationship="DB_SENNOVA.tblProcesostblMacroProcesos" FromRole="tblProcesos" ToRole="tblMacroProcesos" />
+    <NavigationProperty Name="lstProcedimientos" Relationship="DB_SENNOVA.tblProcedimientotblProcesos" FromRole="tblProcesos" ToRole="tblProcedimiento" />
+  </EntityType>
+  <EntityType Name="tblProcedimiento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblProcesos" Relationship="DB_SENNOVA.tblProcedimientotblProcesos" FromRole="tblProcedimiento" ToRole="tblProcesos" />
+    <NavigationProperty Name="lstDocumentos" Relationship="DB_SENNOVA.tblDocumentotblProcedimiento" FromRole="tblProcedimiento" ToRole="tblDocumento" />
+  </EntityType>
+  <Association Name="tblDocumentotblTiposDocumentos">
+    <End Type="DB_SENNOVA.tblDocumento" Role="tblDocumento" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblTiposDocumentos" Role="tblTiposDocumentos" Multiplicity="1" />
+  </Association>
+  <EntityType Name="tblDetallesDocumento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Version" Type="String" Nullable="false" />
+    <Property Name="RutaDoc" Type="String" Nullable="false" />
+    <Property Name="Descargable" Type="Boolean" Nullable="false" />
+    <Property Name="Fisico" Type="Boolean" Nullable="false" />
+    <Property Name="Digital" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblDocumento" Relationship="DB_SENNOVA.tblDetallesDocumentotblDocumento" FromRole="tblDetallesDocumento" ToRole="tblDocumento" />
+    <Property Name="TipoSolicitud" Type="String" Nullable="false" />
+    <Property Name="FechaSolicitud" Type="DateTime" Nullable="false" />
+    <Property Name="FechaRevision" Type="DateTime" Nullable="true" />
+    <Property Name="FechaAprovacion" Type="DateTime" Nullable="true" />
+    <Property Name="CopiaControlada" Type="String" Nullable="false" />
+    <Property Name="FechaCopiaControlada" Type="DateTime" Nullable="true" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblSolicitante" Relationship="DB_SENNOVA.tblDetallesDocumentotblEmpleado" FromRole="tblDetallesDocumento" ToRole="tblEmpleado" />
+    <NavigationProperty Name="tblRevisor" Relationship="DB_SENNOVA.tblDetallesDocumentotblEmpleado1" FromRole="tblDetallesDocumento" ToRole="tblEmpleado" />
+    <NavigationProperty Name="tblAprovador" Relationship="DB_SENNOVA.tblDetallesDocumentotblEmpleado2" FromRole="tblDetallesDocumento" ToRole="tblEmpleado" />
+  </EntityType>
+  <Association Name="tblDetallesDocumentotblDocumento">
+    <End Type="DB_SENNOVA.tblDetallesDocumento" Role="tblDetallesDocumento" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblDocumento" Role="tblDocumento" Multiplicity="1" />
+  </Association>
+  <Association Name="tblDocumentotblProcedimiento">
+    <End Type="DB_SENNOVA.tblDocumento" Role="tblDocumento" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblProcedimiento" Role="tblProcedimiento" Multiplicity="1" />
+  </Association>
+  <Association Name="tblDetallesDocumentotblEmpleado">
+    <End Type="DB_SENNOVA.tblDetallesDocumento" Role="tblDetallesDocumento" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblEmpleado" Role="tblEmpleado" Multiplicity="0..1" />
+  </Association>
+  <Association Name="tblDetallesDocumentotblEmpleado1">
+    <End Type="DB_SENNOVA.tblDetallesDocumento" Role="tblDetallesDocumento" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblEmpleado" Role="tblEmpleado" Multiplicity="0..1" />
+  </Association>
+  <Association Name="tblDetallesDocumentotblEmpleado2">
+    <End Type="DB_SENNOVA.tblDetallesDocumento" Role="tblDetallesDocumento" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblEmpleado" Role="tblEmpleado" Multiplicity="0..1" />
+  </Association>
+  <Association Name="tblProcedimientotblProcesos">
+    <End Type="DB_SENNOVA.tblProcedimiento" Role="tblProcedimiento" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblProcesos" Role="tblProcesos" Multiplicity="1" />
+  </Association>
+  <Association Name="tblProcesostblMacroProcesos">
+    <End Type="DB_SENNOVA.tblProcesos" Role="tblProcesos" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblMacroProcesos" Role="tblMacroProcesos" Multiplicity="1" />
+  </Association>
+  <ComplexType Name="ComplexType1" />
+  <EntityType Name="tblImpresora">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Nullable="false" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="lstComputos" Relationship="DB_SENNOVA.tblComputotblImpresora" FromRole="tblImpresora" ToRole="tblComputo" />
+  </EntityType>
+  <EntityType Name="tblSoftware">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Version" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblTipoLicencia" Relationship="DB_SENNOVA.tblSoftwaretblTipoLicencia" FromRole="tblSoftware" ToRole="tblTipoLicencia" />
+    <NavigationProperty Name="lstEquipoSoftware" Relationship="DB_SENNOVA.tblEquipoSoftwaretblSoftware" FromRole="tblSoftware" ToRole="tblEquipoSoftware" />
+  </EntityType>
+  <EntityType Name="tblTipoLicencia">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="lstSoftware" Relationship="DB_SENNOVA.tblSoftwaretblTipoLicencia" FromRole="tblTipoLicencia" ToRole="tblSoftware" />
+  </EntityType>
+  <Association Name="tblSoftwaretblTipoLicencia">
+    <End Type="DB_SENNOVA.tblSoftware" Role="tblSoftware" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblTipoLicencia" Role="tblTipoLicencia" Multiplicity="1" />
+  </Association>
+  <EntityType Name="tblTipoEquipo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="lstEquipos" Relationship="DB_SENNOVA.tblEquipotblTipoEquipo" FromRole="tblTipoEquipo" ToRole="tblEquipo" />
+  </EntityType>
+  <EntityType Name="tblEquipo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Responsable" Relationship="DB_SENNOVA.tblEquipotblEmpleado" FromRole="tblEquipo" ToRole="tblEmpleado" />
+    <NavigationProperty Name="tblAreaTecnica" Relationship="DB_SENNOVA.tblEquipotblAreaTecnica" FromRole="tblEquipo" ToRole="tblAreaTecnica" />
+    <NavigationProperty Name="tblTipoEquipo" Relationship="DB_SENNOVA.tblEquipotblTipoEquipo" FromRole="tblEquipo" ToRole="tblTipoEquipo" />
+    <NavigationProperty Name="lstMantenimientoEquipos" Relationship="DB_SENNOVA.tblMantenimientoEuipotblEquipo" FromRole="tblEquipo" ToRole="tblMantenimientoEuipo" />
+    <NavigationProperty Name="lstCalibracionEquipos" Relationship="DB_SENNOVA.tblCalibracionEquipotblEquipo" FromRole="tblEquipo" ToRole="tblCalibracionEquipo" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Placa" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Serial" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Marca" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Estado" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="FechaCompra" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Valor" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="NumeroContrato" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="FechaFuncionamiento" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="lstComputos" Relationship="DB_SENNOVA.tblComputotblEquipo" FromRole="tblEquipo" ToRole="tblComputo" />
+    <NavigationProperty Name="lstEquipoTecnicos" Relationship="DB_SENNOVA.tblEquipoTecnicotblEquipo" FromRole="tblEquipo" ToRole="tblEquipoTecnico" />
+    <NavigationProperty Name="lstEquipoAccesorios" Relationship="DB_SENNOVA.tblEquipoAccesoriotblEquipo" FromRole="tblEquipo" ToRole="tblEquipoAccesorio" />
+  </EntityType>
+  <Association Name="tblEquipotblTipoEquipo">
+    <End Type="DB_SENNOVA.tblEquipo" Role="tblEquipo" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblTipoEquipo" Role="tblTipoEquipo" Multiplicity="1" />
+  </Association>
+  <EntityType Name="tblEquipoSoftware">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="tblSoftware" Relationship="DB_SENNOVA.tblEquipoSoftwaretblSoftware" FromRole="tblEquipoSoftware" ToRole="tblSoftware" />
+    <NavigationProperty Name="tblComputo" Relationship="DB_SENNOVA.tblEquipoSoftwaretblComputo" FromRole="tblEquipoSoftware" ToRole="tblComputo" />
+  </EntityType>
+  <Association Name="tblEquipoSoftwaretblSoftware">
+    <End Type="DB_SENNOVA.tblEquipoSoftware" Role="tblEquipoSoftware" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblSoftware" Role="tblSoftware" Multiplicity="0..1" />
+  </Association>
+  <EntityType Name="tblCalibracion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TipoCalibracion" Type="String" Nullable="false" DefaultValue="('PREDICTIVO','PREVENTIVO','CORRECTIVO')" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="TipoServicio" Type="String" Nullable="false" DefaultValue="('PREDICTIVO','PREVENTIVO','CORRECTIVO')" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="lstCalibracionEquipos" Relationship="DB_SENNOVA.tblCalibracionEquipotblCalibracion" FromRole="tblCalibracion" ToRole="tblCalibracionEquipo" />
+    <Property Name="NumeroCertificado" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Resultados" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Conforme" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="FechaProxima" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Observaciones" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblMantenimiento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Ejecutor" Relationship="DB_SENNOVA.tblMantenimientotblEmpleado" FromRole="tblMantenimiento" ToRole="tblEmpleado" />
+    <NavigationProperty Name="Revisor" Relationship="DB_SENNOVA.tblEmpleadotblMantenimiento" FromRole="tblMantenimiento" ToRole="tblEmpleado" />
+    <NavigationProperty Name="lstMantenimientoEuipos" Relationship="DB_SENNOVA.tblMantenimientoEuipotblMantenimiento" FromRole="tblMantenimiento" ToRole="tblMantenimientoEuipo" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TipoMantenimiento" Type="String" Nullable="false" DefaultValue="('PREDICTIVO','PREVENTIVO','CORRECTIVO')" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Actividad" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="NumeroReporte" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ClaseMantenimiento" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="AceptacionOferta" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Observaciones" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblMantenimientoEquipo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="tblEquipo" Relationship="DB_SENNOVA.tblMantenimientoEuipotblEquipo" FromRole="tblMantenimientoEuipo" ToRole="tblEquipo" />
+    <NavigationProperty Name="tblMantenimiento" Relationship="DB_SENNOVA.tblMantenimientoEuipotblMantenimiento" FromRole="tblMantenimientoEuipo" ToRole="tblMantenimiento" />
+  </EntityType>
+  <Association Name="tblMantenimientoEuipotblEquipo">
+    <End Type="DB_SENNOVA.tblMantenimientoEquipo" Role="tblMantenimientoEuipo" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblEquipo" Role="tblEquipo" Multiplicity="1" />
+  </Association>
+  <Association Name="tblMantenimientoEuipotblMantenimiento">
+    <End Type="DB_SENNOVA.tblMantenimientoEquipo" Role="tblMantenimientoEuipo" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblMantenimiento" Role="tblMantenimiento" Multiplicity="1" />
+  </Association>
+  <EntityType Name="tblCalibracionEquipo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="tblCalibracion" Relationship="DB_SENNOVA.tblCalibracionEquipotblCalibracion" FromRole="tblCalibracionEquipo" ToRole="tblCalibracion" />
+    <NavigationProperty Name="tblEquipo" Relationship="DB_SENNOVA.tblCalibracionEquipotblEquipo" FromRole="tblCalibracionEquipo" ToRole="tblEquipo" />
+  </EntityType>
+  <Association Name="tblCalibracionEquipotblCalibracion">
+    <End Type="DB_SENNOVA.tblCalibracionEquipo" Role="tblCalibracionEquipo" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblCalibracion" Role="tblCalibracion" Multiplicity="1" />
+  </Association>
+  <Association Name="tblCalibracionEquipotblEquipo">
+    <End Type="DB_SENNOVA.tblCalibracionEquipo" Role="tblCalibracionEquipo" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblEquipo" Role="tblEquipo" Multiplicity="1" />
+  </Association>
+  <Association Name="tblEquipotblEmpleado">
+    <End Type="DB_SENNOVA.tblEquipo" Role="tblEquipo" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblEmpleado" Role="tblEmpleado" Multiplicity="1" />
+  </Association>
+  <Association Name="tblMantenimientotblEmpleado">
+    <End Type="DB_SENNOVA.tblMantenimiento" Role="tblMantenimiento" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblEmpleado" Role="tblEmpleado" Multiplicity="1" />
+  </Association>
+  <Association Name="tblEmpleadotblMantenimiento">
+    <End Type="DB_SENNOVA.tblMantenimiento" Role="tblMantenimiento" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblEmpleado" Role="tblEmpleado" Multiplicity="1" />
+  </Association>
+  <Association Name="tblEquipotblAreaTecnica">
+    <End Type="DB_SENNOVA.tblEquipo" Role="tblEquipo" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblAreaTecnica" Role="tblAreaTecnica" Multiplicity="1" />
+  </Association>
+  <EntityType Name="tblComputo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="tblEquipo" Relationship="DB_SENNOVA.tblComputotblEquipo" FromRole="tblComputo" ToRole="tblEquipo" />
+    <NavigationProperty Name="tblImpresora" Relationship="DB_SENNOVA.tblComputotblImpresora" FromRole="tblComputo" ToRole="tblImpresora" />
+    <NavigationProperty Name="lstEquipoSoftware" Relationship="DB_SENNOVA.tblEquipoSoftwaretblComputo" FromRole="tblComputo" ToRole="tblEquipoSoftware" />
+    <Property Name="Ip" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CuentaAdmin" Type="Boolean" />
+    <Property Name="Backup" Type="Boolean" />
+    <Property Name="Procesador" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Ram" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Disco" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Observaciones" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <Association Name="tblComputotblEquipo">
+    <End Type="DB_SENNOVA.tblComputo" Role="tblComputo" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblEquipo" Role="tblEquipo" Multiplicity="1" />
+  </Association>
+  <Association Name="tblComputotblImpresora">
+    <End Type="DB_SENNOVA.tblComputo" Role="tblComputo" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblImpresora" Role="tblImpresora" Multiplicity="0..1" />
+  </Association>
+  <Association Name="tblEquipoSoftwaretblComputo">
+    <End Type="DB_SENNOVA.tblEquipoSoftware" Role="tblEquipoSoftware" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblComputo" Role="tblComputo" Multiplicity="1" />
+  </Association>
+  <EntityType Name="tblEquipoTecnico">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="tblEquipo" Relationship="DB_SENNOVA.tblEquipoTecnicotblEquipo" FromRole="tblEquipoTecnico" ToRole="tblEquipo" />
+    <Property Name="ClaseEquipo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Caracteristicas" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Fimware" Type="String" Nullable="false" />
+    <Property Name="SoftwareVersion" Type="String" Nullable="false" />
+    <Property Name="Aire" Type="Boolean" Nullable="false" />
+    <Property Name="Electricidad" Type="Boolean" Nullable="false" />
+    <Property Name="Gas" Type="Boolean" Nullable="false" />
+    <Property Name="Aceite" Type="Boolean" Nullable="false" />
+    <Property Name="Otros" Type="Boolean" Nullable="false" />
+    <Property Name="PresionAire" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Caudal" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Voltaje" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Amperaje" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Potencia" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="TipoGas" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PresionGas" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="TipoAceite" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Especifique" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Observaciones" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblTipoPatron" Relationship="DB_SENNOVA.tblEquipoTecnicotblTipoPatron" FromRole="tblEquipoTecnico" ToRole="tblTipoPatron" />
+  </EntityType>
+  <Association Name="tblEquipoTecnicotblEquipo">
+    <End Type="DB_SENNOVA.tblEquipoTecnico" Role="tblEquipoTecnico" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblEquipo" Role="tblEquipo" Multiplicity="1" />
+  </Association>
+  <EntityType Name="tblTipoPatron">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="lstEquipoTecnicos" Relationship="DB_SENNOVA.tblEquipoTecnicotblTipoPatron" FromRole="tblTipoPatron" ToRole="tblEquipoTecnico" />
+  </EntityType>
+  <Association Name="tblEquipoTecnicotblTipoPatron">
+    <End Type="DB_SENNOVA.tblEquipoTecnico" Role="tblEquipoTecnico" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblTipoPatron" Role="tblTipoPatron" Multiplicity="0..1" />
+  </Association>
+  <EntityType Name="tblAccesorios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="lstEquipoAccesorios" Relationship="DB_SENNOVA.tblEquipoAccesoriotblAccesorios" FromRole="tblAccesorios" ToRole="tblEquipoAccesorio" />
+  </EntityType>
+  <EntityType Name="tblEquipoAccesorio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="tblEquipo" Relationship="DB_SENNOVA.tblEquipoAccesoriotblEquipo" FromRole="tblEquipoAccesorio" ToRole="tblEquipo" />
+    <NavigationProperty Name="tblAccesorios" Relationship="DB_SENNOVA.tblEquipoAccesoriotblAccesorios" FromRole="tblEquipoAccesorio" ToRole="tblAccesorios" />
+  </EntityType>
+  <Association Name="tblEquipoAccesoriotblEquipo">
+    <End Type="DB_SENNOVA.tblEquipoAccesorio" Role="tblEquipoAccesorio" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblEquipo" Role="tblEquipo" Multiplicity="1" />
+  </Association>
+  <Association Name="tblEquipoAccesoriotblAccesorios">
+    <End Type="DB_SENNOVA.tblEquipoAccesorio" Role="tblEquipoAccesorio" Multiplicity="*" />
+    <End Type="DB_SENNOVA.tblAccesorios" Role="tblAccesorios" Multiplicity="1" />
+  </Association>
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUsers" Relationship="DB_SENNOVA.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUsers" Relationship="DB_SENNOVA.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUsers" Relationship="DB_SENNOVA.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUserClaims" Relationship="DB_SENNOVA.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+    <NavigationProperty Name="AspNetUserLogins" Relationship="DB_SENNOVA.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+    <NavigationProperty Name="AspNetRoles" Relationship="DB_SENNOVA.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+  </EntityType>
+  <EntityType Name="tblDetallesDocumentoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Version" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RutaDoc" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Descargable" Type="Boolean" Nullable="false" />
+    <Property Name="Fisico" Type="Boolean" Nullable="false" />
+    <Property Name="Digital" Type="Boolean" Nullable="false" />
+    <Property Name="TipoSolicitud" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FechaSolicitud" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FechaRevision" Type="DateTime" Precision="3" />
+    <Property Name="FechaAprovacion" Type="DateTime" Precision="3" />
+    <Property Name="CopiaControlada" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FechaCopiaControlada" Type="DateTime" Precision="3" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <Property Name="tblDocumento_Id" Type="Int32" Nullable="false" />
+    <Property Name="tblSolicitante_Id" Type="Int32" />
+    <Property Name="tblRevisor_Id" Type="Int32" />
+    <Property Name="tblAprovador_Id" Type="Int32" />
+    <NavigationProperty Name="tblDocumento" Relationship="DB_SENNOVA.FK_tblDetallesDocumentotblDocumento" FromRole="tblDetallesDocumentoSet" ToRole="tblDocumento" />
+    <NavigationProperty Name="tblEmpleado" Relationship="DB_SENNOVA.FK_tblDetallesDocumentotblEmpleado" FromRole="tblDetallesDocumentoSet" ToRole="tblEmpleado" />
+    <NavigationProperty Name="tblEmpleado1" Relationship="DB_SENNOVA.FK_tblDetallesDocumentotblEmpleado1" FromRole="tblDetallesDocumentoSet" ToRole="tblEmpleado" />
+    <NavigationProperty Name="tblEmpleado2" Relationship="DB_SENNOVA.FK_tblDetallesDocumentotblEmpleado2" FromRole="tblDetallesDocumentoSet" ToRole="tblEmpleado" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Type="DB_SENNOVA.AspNetUsers" Role="AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_SENNOVA.AspNetUserClaims" Role="AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Type="DB_SENNOVA.AspNetUsers" Role="AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_SENNOVA.AspNetUserLogins" Role="AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDetallesDocumentotblDocumento">
+    <End Type="DB_SENNOVA.tblDocumento" Role="tblDocumento" Multiplicity="1" />
+    <End Type="DB_SENNOVA.tblDetallesDocumentoSet" Role="tblDetallesDocumentoSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDocumento">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblDetallesDocumentoSet">
+        <PropertyRef Name="tblDocumento_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDetallesDocumentotblEmpleado">
+    <End Type="DB_SENNOVA.tblEmpleado" Role="tblEmpleado" Multiplicity="0..1" />
+    <End Type="DB_SENNOVA.tblDetallesDocumentoSet" Role="tblDetallesDocumentoSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblEmpleado">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblDetallesDocumentoSet">
+        <PropertyRef Name="tblSolicitante_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDetallesDocumentotblEmpleado1">
+    <End Type="DB_SENNOVA.tblEmpleado" Role="tblEmpleado" Multiplicity="0..1" />
+    <End Type="DB_SENNOVA.tblDetallesDocumentoSet" Role="tblDetallesDocumentoSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblEmpleado">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblDetallesDocumentoSet">
+        <PropertyRef Name="tblRevisor_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDetallesDocumentotblEmpleado2">
+    <End Type="DB_SENNOVA.tblEmpleado" Role="tblEmpleado" Multiplicity="0..1" />
+    <End Type="DB_SENNOVA.tblDetallesDocumentoSet" Role="tblDetallesDocumentoSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblEmpleado">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblDetallesDocumentoSet">
+        <PropertyRef Name="tblAprovador_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles">
+    <End Type="DB_SENNOVA.AspNetRoles" Role="AspNetRoles" Multiplicity="*" />
+    <End Type="DB_SENNOVA.AspNetUsers" Role="AspNetUsers" Multiplicity="*" />
+  </Association>
+</Schema>

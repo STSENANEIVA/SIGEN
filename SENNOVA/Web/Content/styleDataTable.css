@@ -1,0 +1,166 @@
+.navbar-nav li {
+    margin-right: 19px;
+    text-align: end
+}
+
+.navbar-nav #logout {
+    margin-right: 0px !important;
+    text-align: end !important;
+}
+
+.dropdown-menu {
+    float: right !important;
+}
+
+.show .navbar-nav li {
+    margin-right: 19px !important;
+    text-align: end
+}
+
+.dropend a {
+    padding: 3px 20px !important;
+    color: #333333 !important;
+    font-weight: 400 !important;
+}
+
+
+.dt-buttons {
+    float: left !important;
+}
+
+.btn-secondary {
+    background-color: #9ba2a9 !important;
+    border-color: #9ba2a9 !important;
+}
+
+.dt-buttons span {
+    font-size: 12px !important;
+}
+
+.dataTables_filter {
+    float: right !important;
+    font-size: 12px !important;
+}
+
+.dataTables_length {
+    float: left !important;
+    margin-right: 13px !important;
+    font-size: 12px !important;
+}
+
+.dataTables_info {
+    float: left !important;
+    font-size: 12px !important;
+}
+
+.dataTables_paginate {
+    float: right !important;
+    font-size: 12px !important;
+}
+
+.page-item.active .page-link {
+    background-color: #ff6a00 !important;
+    border-color: #ff6a00 !important;
+    color:white!important;
+}
+
+thead {
+    background-color: #ff6a00!important;
+}
+
+th {
+    text-align: center !important;
+    color: white!important;
+}
+.buttons-html5, .buttons-print {
+    text-decoration: none !important;
+    min-width: 88px !important;
+}
+div.dt-button-collection {
+    width: 100px !important;
+
+}
+
+.buttons-columnVisibility {
+    background-color: white !important;
+}
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #ff6a00 !important;
+    color: white;
+}
+
+table.dataTable tr {
+    font-size: 12px!important;
+}
+
+table.dataTable tr.dtrg-level-0 td {
+    font-size: 12px!important;
+}
+
+.btn-sm {
+    font-size: 12px !important;
+}
+
+.pagination > li > a {
+    color: #212529 !important;
+}
+
+
+#MainContent_ddlTipoDocumento, #MainContent_txtApellidos, #MainContent_txtNumeroIdentificacion, #MainContent_txtTelefono, #MainContent_txtNombres, #MainContent_txtEmail {
+    max-width: 400px!important;
+}
+
+#frmLogin {
+    background: #fff;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 30px 60px 0 rgb(0 0 0 / 30%);
+    margin-top: 11%;
+    margin-bottom: 8%;
+    width: 40%;
+}
+
+#MainContent_Email, #MainContent_Password {
+    min-width: 280px !important;
+    max-width: 280px !important;
+    font-size: 15px !important;
+}
+
+#MainContent_btnLogin {
+    background-color: #FF6B00;
+    border-color: #FF6B00;
+    color: #fff;
+    font-size: 15px!important;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-left: 0px!important;
+}
+
+@media only screen and (max-width: 1400px) {
+    html {
+        zoom: .91
+    }
+
+    #frmLogin {
+        margin-top: 12.7%;
+        margin-bottom: 9.5%;
+        width: 47.5%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    html {
+        zoom: .76
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    html {
+        zoom: .76
+    }
+}
+
+.modal-backdrop {
+    width:100%!important;
+    height: 100%!important;
+}

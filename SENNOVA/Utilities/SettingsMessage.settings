@@ -1,0 +1,387 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Utilities" GeneratedClassName="SettingsMessage">
+  <Profiles />
+  <Settings>
+    <Setting Name="PersonaNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">La Persona no existe !</Value>
+    </Setting>
+    <Setting Name="TipoDocumentoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Tipo Documento no existe !</Value>
+    </Setting>
+    <Setting Name="RegionNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">La Region no existe !</Value>
+    </Setting>
+    <Setting Name="RegionalNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">La Regional no existe !</Value>
+    </Setting>
+    <Setting Name="CodigoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Codigo no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="NombreVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Nombre no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="DireccionVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Direccion no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="TelefonoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Telefono no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="EmailVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Email no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="ApellidosVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Apellidos no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="AreaConocimientoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Area de Conocimiento no existe !</Value>
+    </Setting>
+    <Setting Name="CentroFormacionNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Centro de Formación no existe !</Value>
+    </Setting>
+    <Setting Name="LineaProgramaticaNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">La Linea Programatica no existe !</Value>
+    </Setting>
+    <Setting Name="RedConocimientoSectorialNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">La Red de Conocimiento Sectorial no existe !</Value>
+    </Setting>
+    <Setting Name="RolSennovaNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Rol SENNOVA no existe !</Value>
+    </Setting>
+    <Setting Name="TipoProductoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Tipo de Producto no existe !</Value>
+    </Setting>
+    <Setting Name="TipoProductoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Tipo Producto no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="ActividadVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Actividad no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="ProductoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Producto no existe !</Value>
+    </Setting>
+    <Setting Name="ActividadNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">La Actividad no existe !</Value>
+    </Setting>
+    <Setting Name="ProyectoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Proyecto no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="ObjetivoEspecificoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Objetivo Especifico no existe !</Value>
+    </Setting>
+    <Setting Name="ProyectoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">La Proyecto no existe !</Value>
+    </Setting>
+    <Setting Name="AvanceProyectoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Avance del Proyecto no existe !</Value>
+    </Setting>
+    <Setting Name="MesVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Mes no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="ProyectadoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Proyectado no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="EjecutadoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Ejecutado no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="numeroIdentificacionVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Numero de Identificacion no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="ipVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Ip no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="TipoDocumentoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Tipo Documento no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="RolSennovaVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Rol SENNOVA no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="GuardoCorrecto" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Se ha guardado correctamente !</Value>
+    </Setting>
+    <Setting Name="CamposObligatorios" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Los campos con (*) son obligatorios !</Value>
+    </Setting>
+    <Setting Name="TituloProyecto" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Titulo no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="AnoEjecucion" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Año de ejecución no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="FechaDiligenciamiento" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Fecha no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="ObjetivoGeneralVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Objetivo no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="AsignacionInicialVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Asignación no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="RegionVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Region no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="RegionalVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Regional no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="CentroFormacionVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Centro de Formación no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="LineaProgramaticaVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Linea Programatica no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="RedConocimientoSectorialVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Red de Conocimiento Sectorial no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="AreaConocimientoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Area de Conocimiento no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="PersonaVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Persona  no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="SoportesProductos" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">~/SoportesProductos/</Value>
+    </Setting>
+    <Setting Name="RubroVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Rubro no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="RubroNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Rubro no existe !</Value>
+    </Setting>
+    <Setting Name="ObjetoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Objeto no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="ValorVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Valor no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="ProyectoRubroNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Proyecto Rubro no existe !</Value>
+    </Setting>
+    <Setting Name="ProyectoRubroVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Proyecto Rubro no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="EmpleadoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Empleado no existe !</Value>
+    </Setting>
+    <Setting Name="EmpleadoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Empleado no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="AreaTecnicaVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Area Tecnica no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="AreaTecnicaNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Area Tecnica no existe !</Value>
+    </Setting>
+    <Setting Name="IngresosAreasTecnicasNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Ingreso Area Tecnica no existe !</Value>
+    </Setting>
+    <Setting Name="IngresosAreasTecnicasVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Ingreso Area Tecnica no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="IngresoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Ingreso no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="IngresoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Ingreso no existe !</Value>
+    </Setting>
+    <Setting Name="ProgramaFormacionNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Programa de Formacion no existe !</Value>
+    </Setting>
+    <Setting Name="ProgramaFormacionVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo  Programa de Formacion no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="SectorEconomicoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Sector Economico no existe !</Value>
+    </Setting>
+    <Setting Name="SectorEconomicoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo  Sector Economico no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="ServicioNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Ingreso no existe !</Value>
+    </Setting>
+    <Setting Name="ServicioVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo  Servicio no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="TipoVisitanteNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Tipo Visitante no existe !</Value>
+    </Setting>
+    <Setting Name="TipoVisitanteVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo  Tipo Visitante no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="TipoAreaTecnicaNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Tipo Area Tecnica no existe !</Value>
+    </Setting>
+    <Setting Name="TipoAreaTecnicaVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo  Tipo Area Tecnica no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="VisitanteNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Visitante no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="VisitanteVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Visitante no existe !</Value>
+    </Setting>
+    <Setting Name="FechaVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Fecha no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="PoliticaDatosVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Politica de Datos no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="RazonSocialVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Razon Social no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="NitVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Nit no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="EmpresaNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">La Empresa no existe !</Value>
+    </Setting>
+    <Setting Name="EmpresaVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Empresa no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="VersionVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Versión no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="RutaDocVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Ruta no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="DocumentoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Documento no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="DocumentoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Documento no existe !</Value>
+    </Setting>
+    <Setting Name="SolicitanteVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Solicitante no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="RevisorVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Revisor no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="AprovadorVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Aprovador no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="MacroProcesoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Macro Proceso no existe !</Value>
+    </Setting>
+    <Setting Name="MacroProcesoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Macro Proceso no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="ProcedimientoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Procedimiento no existe !</Value>
+    </Setting>
+    <Setting Name="ProcedimientoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Procedimiento no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="ProcesoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Proceso no existe !</Value>
+    </Setting>
+    <Setting Name="ProcesoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Proceso no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="DetallesDocumentoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Los Detalles del Documento no existe !</Value>
+    </Setting>
+    <Setting Name="TipoEquipoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Tipo de Equipo no existe !</Value>
+    </Setting>
+    <Setting Name="TipoLicenciaNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Tipo de Licencia no existe !</Value>
+    </Setting>
+    <Setting Name="TipoPatronNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Tipo de Patron no existe !</Value>
+    </Setting>
+    <Setting Name="ImpresoraNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">La Impresora no existe !</Value>
+    </Setting>
+    <Setting Name="SoftwareNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Software no existe !</Value>
+    </Setting>
+    <Setting Name="EquipoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Equipo no existe !</Value>
+    </Setting>
+    <Setting Name="ComputoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Equipo Computo no existe !</Value>
+    </Setting>
+    <Setting Name="ComputoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Equipo Computo no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="SoftwareVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Software no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="EquipoSoftwareNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Equipo Software no existe !</Value>
+    </Setting>
+    <Setting Name="EquipoTecnicoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Equipo Tecnico no existe !</Value>
+    </Setting>
+    <Setting Name="EquipoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Equipo no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="TipoPatronVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Tipo de Patron no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="EquipoTecnicoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Equipo Técnico no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="AccesoriosNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El AccesorioTecnico no existe !</Value>
+    </Setting>
+    <Setting Name="AccesoriosVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Accesorio no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="EquipoAccesorioNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Equipo AccesorioTecnico no existe !</Value>
+    </Setting>
+    <Setting Name="EquipoAccesorioVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Equipo Accesorio no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="TerminoCondicionNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Termino y condición no existe !</Value>
+    </Setting>
+    <Setting Name="TerminoCondicionVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Termino y condición no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="CotizacionNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">La Cotización no existe !</Value>
+    </Setting>
+    <Setting Name="CargoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Cargo no existe !</Value>
+    </Setting>
+    <Setting Name="CargoVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Cargo no puede estar vacio !</Value>
+    </Setting>
+    <Setting Name="CorreoEnviado" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El mensaje se ha enviado exitozamente!</Value>
+    </Setting>
+    <Setting Name="OrdenTrabajoNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">La Orden de trabajo no existe!</Value>
+    </Setting>
+    <Setting Name="NumeroOTVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Número de orden de trabajo no puede estar vacio!</Value>
+    </Setting>
+    <Setting Name="FechaEmisionVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Fecha emisión no puede estar vacio!</Value>
+    </Setting>
+    <Setting Name="FechaLimiteVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Fecha limite no puede estar vacio!</Value>
+    </Setting>
+    <Setting Name="FechaIngresoItemVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Fecha ingreso de orden de trabajo e item de servicio no puede estar vacio!</Value>
+    </Setting>
+    <Setting Name="CantidadVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Cantidad no puede estar vacio!</Value>
+    </Setting>
+    <Setting Name="PrecioVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Precio del servicio no puede estar vacio!</Value>
+    </Setting>
+    <Setting Name="ValorUnitarioVacio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El campo Valor unitario no puede estar vacio!</Value>
+    </Setting>
+    <Setting Name="ClienteNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El cliente no existe!</Value>
+    </Setting>
+    <Setting Name="FamiliaNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">La Familia no existe!</Value>
+    </Setting>
+    <Setting Name="TerminoCotizacionNull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Termino Cotizacion no existe!</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

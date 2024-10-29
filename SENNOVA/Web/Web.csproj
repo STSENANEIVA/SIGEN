@@ -1,0 +1,977 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2A5567F1-5635-4E7C-8121-766DB1EB6BAB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web</RootNamespace>
+    <AssemblyName>Web</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44343</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.11.3.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.11.3\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="SpreadsheetLight, Version=3.5.0.0, Culture=neutral, PublicKeyToken=32fbb46dc1730c57, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpreadsheetLight.3.5.0\lib\netstandard2.0\SpreadsheetLight.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.5.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.7.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.4.1\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.4.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.4.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\styleDataTable.css" />
+    <Content Include="Img\bannerElectronica.jpg" />
+    <Content Include="Img\bannerMateriales.jpg" />
+    <Content Include="Img\bannerMetrologia.jpg" />
+    <Content Include="Img\bannerPortafolioServicios.jpg" />
+    <Content Include="Img\bannerTecnologiasInformacion.jpg" />
+    <Content Include="Img\news1.jpg" />
+    <Content Include="Img\news2.jpg" />
+    <Content Include="Img\personal-5.png" />
+    <Content Include="News.aspx" />
+    <Content Include="About.aspx" />
+    <Content Include="Account\AddPhoneNumber.aspx" />
+    <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\Forgot.aspx" />
+    <Content Include="Account\Lockout.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\ManageLogins.aspx" />
+    <Content Include="Account\ManagePassword.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Account\ResetPassword.aspx" />
+    <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
+    <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Img\bannerContact.png" />
+    <Content Include="Img\bannerServicios.png" />
+    <Content Include="Img\Fondo-10.png" />
+    <Content Include="Img\Fondo-11.png" />
+    <Content Include="Img\Fondo-12.png" />
+    <Content Include="Img\listadoDeServicios.png" />
+    <Content Include="Img\mision.jpeg" />
+    <Content Include="Img\nuestrosServicios.png" />
+    <Content Include="Img\personal-1.png" />
+    <Content Include="Img\personal-10.png" />
+    <Content Include="Img\personal-2.png" />
+    <Content Include="Img\personal-3.png" />
+    <Content Include="Img\personal-4.png" />
+    <Content Include="Img\personal-6.png" />
+    <Content Include="Img\personal-7.png" />
+    <Content Include="Img\personal-8.png" />
+    <Content Include="Img\personal-9.png" />
+    <Content Include="Img\vision.jpeg" />
+    <Content Include="Scripts\alerts.js" />
+    <Content Include="Services\SEliminar.asmx" />
+    <Content Include="Services\SProgramaFormacion.asmx" />
+    <Content Include="Services\SServicios.asmx" />
+    <Content Include="Services\STerminosCondiciones.asmx" />
+    <Content Include="Servicios.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Account\Web.config" />
+    <Content Include="Files\Formato_Programa_Formacion.xlsx" />
+    <Content Include="Files\Formato_Personas.xlsx" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Img\enterprise-1.jpeg" />
+    <Content Include="Img\enterprise-2.png" />
+    <Content Include="Img\enterprise-3.png" />
+    <Content Include="Img\enterprise-4.png" />
+    <Content Include="Img\Fondo-1.jpg" />
+    <Content Include="Img\Fondo-2.jpg" />
+    <Content Include="Img\Fondo-3.jpg" />
+    <Content Include="Img\Fondo-4.jpg" />
+    <Content Include="Img\Fondo-4.png" />
+    <Content Include="Img\Fondo-5.jpg" />
+    <Content Include="Img\Fondo-6.jpg" />
+    <Content Include="Img\Fondo-7.jpg" />
+    <Content Include="Img\Fondo-8.jpg" />
+    <Content Include="Img\Fondo-9.jpg" />
+    <Content Include="Img\loading.gif" />
+    <Content Include="Img\Recurso1-8.png" />
+    <Content Include="Img\sena.jpeg" />
+    <Content Include="Img\sennova.png" />
+    <Content Include="Img\serviciosTecnologicos.jpeg" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Services\SAccesorios.asmx" />
+    <Content Include="Services\SCentroFormacion.asmx" />
+    <Content Include="Services\SLineaProgramatica.asmx" />
+    <Content Include="Services\SPersona.asmx" />
+    <Content Include="Services\SProyecto.asmx" />
+    <Content Include="Services\SSoftware.asmx" />
+    <Content Include="Site.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Views\Business\frmActividades.aspx" />
+    <Content Include="Views\Business\frmDatosProyectos.aspx" />
+    <Content Include="Views\Business\frmObjetivosEspecificos.aspx" />
+    <Content Include="Views\Business\frmProyecto.aspx" />
+    <Content Include="Views\Configurations\frmAreaConocimiento.aspx" />
+    <Content Include="Views\Configurations\frmFamilia.aspx" />
+    <Content Include="Views\Configurations\frmPersona.aspx" />
+    <Content Include="Views\Configurations\frmCargo.aspx" />
+    <Content Include="Views\Configurations\frmTerminoCondicion.aspx" />
+    <Content Include="Views\Configurations\frmServicio.aspx" />
+    <Content Include="Views\Configurations\frmCentroFormacion.aspx" />
+    <Content Include="Views\Configurations\frmLineaProgramatica.aspx" />
+    <Content Include="Views\Configurations\frmEmpresa.aspx" />
+    <Content Include="Views\Configurations\frmAccesorios.aspx" />
+    <Content Include="Views\Configurations\frmPersonal.aspx" />
+    <Content Include="Views\Configurations\frmAreaTecnica.aspx" />
+    <Content Include="Views\Equipment\frmEquipoTecnico.aspx" />
+    <Content Include="Views\Equipment\frmEquipoComputo.aspx" />
+    <Content Include="Views\Configurations\frmRedConocimientoSectorial.aspx" />
+    <Content Include="Views\Configurations\frmMacroProceso.aspx" />
+    <Content Include="Views\Configurations\frmProceso.aspx" />
+    <Content Include="Views\Configurations\frmProcedimiento.aspx" />
+    <Content Include="Views\Configurations\frmDocumento.aspx" />
+    <Content Include="Views\Configurations\frmImpresora.aspx" />
+    <Content Include="Views\Configurations\frmSoftware.aspx" />
+    <Content Include="Views\Configurations\frmRubro.aspx" />
+    <Content Include="Views\Configurations\frmRegional.aspx" />
+    <Content Include="Views\Configurations\frmRegion.aspx" />
+    <Content Include="Views\Configurations\frmRolSennova.aspx" />
+    <Content Include="Views\Configurations\frmProgramaFormacion.aspx" />
+    <Content Include="Views\Configurations\frmSectorEconomico.aspx" />
+    <Content Include="Views\Configurations\frmTipoAreaTecnica.aspx" />
+    <Content Include="Views\Configurations\frmTipoLicencia.aspx" />
+    <Content Include="Views\Configurations\frmTipoEquipo.aspx" />
+    <Content Include="Views\Configurations\frmTiposDocumentos.aspx" />
+    <Content Include="Views\Configurations\frmTipoPatron.aspx" />
+    <Content Include="Views\Configurations\frmTipoVisitante.aspx" />
+    <Content Include="Views\Configurations\frmTipoDocumento.aspx" />
+    <Content Include="Views\Configurations\frmTipoProducto.aspx" />
+    <Content Include="Views\Documents\frmDocumentos.aspx" />
+    <Content Include="Views\Equipment\frmRegistrosEquipoComputo.aspx" />
+    <Content Include="Views\GetInto\frmIngresos.aspx" />
+    <Content Include="Views\GetInto\frmRegistrosIngresos.aspx" />
+    <Content Include="Views\Operational\frmCotizacion.aspx" />
+    <Content Include="Views\Operational\frmOrdenTrabajo.aspx" />
+    <Content Include="Views\Operational\frmRegistrosCotizacion.aspx" />
+    <Content Include="Views\Operational\frmRegistrosOrdenTrabajo.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AddPhoneNumber.aspx.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AddPhoneNumber.aspx.designer.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.designer.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.designer.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.designer.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.designer.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.designer.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Sendinblue.cs" />
+    <Compile Include="Services\SEliminar.asmx.cs">
+      <DependentUpon>SEliminar.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\SProgramaFormacion.asmx.cs">
+      <DependentUpon>SProgramaFormacion.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\SServicios.asmx.cs">
+      <DependentUpon>SServicios.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\STerminosCondiciones.asmx.cs">
+      <DependentUpon>STerminosCondiciones.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Servicios.aspx.cs">
+      <DependentUpon>Servicios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Servicios.aspx.designer.cs">
+      <DependentUpon>Servicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\SAccesorios.asmx.cs">
+      <DependentUpon>SAccesorios.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\SCentroFormacion.asmx.cs">
+      <DependentUpon>SCentroFormacion.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\SLineaProgramatica.asmx.cs">
+      <DependentUpon>SLineaProgramatica.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\SPersona.asmx.cs">
+      <DependentUpon>SPersona.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\SProyecto.asmx.cs">
+      <DependentUpon>SProyecto.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\SSoftware.asmx.cs">
+      <DependentUpon>SSoftware.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Business\frmActividades.aspx.cs">
+      <DependentUpon>frmActividades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Business\frmActividades.aspx.designer.cs">
+      <DependentUpon>frmActividades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Business\frmDatosProyectos.aspx.cs">
+      <DependentUpon>frmDatosProyectos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Business\frmDatosProyectos.aspx.designer.cs">
+      <DependentUpon>frmDatosProyectos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Business\frmObjetivosEspecificos.aspx.cs">
+      <DependentUpon>frmObjetivosEspecificos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Business\frmObjetivosEspecificos.aspx.designer.cs">
+      <DependentUpon>frmObjetivosEspecificos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Business\frmProyecto.aspx.cs">
+      <DependentUpon>frmProyecto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Business\frmProyecto.aspx.designer.cs">
+      <DependentUpon>frmProyecto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmAreaConocimiento.aspx.cs">
+      <DependentUpon>frmAreaConocimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmAreaConocimiento.aspx.designer.cs">
+      <DependentUpon>frmAreaConocimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmFamilia.aspx.cs">
+      <DependentUpon>frmFamilia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmFamilia.aspx.designer.cs">
+      <DependentUpon>frmFamilia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmPersona.aspx.cs">
+      <DependentUpon>frmPersona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmPersona.aspx.designer.cs">
+      <DependentUpon>frmPersona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmCargo.aspx.cs">
+      <DependentUpon>frmCargo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmCargo.aspx.designer.cs">
+      <DependentUpon>frmCargo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmTerminoCondicion.aspx.cs">
+      <DependentUpon>frmTerminoCondicion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmTerminoCondicion.aspx.designer.cs">
+      <DependentUpon>frmTerminoCondicion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmServicio.aspx.cs">
+      <DependentUpon>frmServicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmServicio.aspx.designer.cs">
+      <DependentUpon>frmServicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmCentroFormacion.aspx.cs">
+      <DependentUpon>frmCentroFormacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmCentroFormacion.aspx.designer.cs">
+      <DependentUpon>frmCentroFormacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmLineaProgramatica.aspx.cs">
+      <DependentUpon>frmLineaProgramatica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmLineaProgramatica.aspx.designer.cs">
+      <DependentUpon>frmLineaProgramatica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmEmpresa.aspx.cs">
+      <DependentUpon>frmEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmEmpresa.aspx.designer.cs">
+      <DependentUpon>frmEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmAccesorios.aspx.cs">
+      <DependentUpon>frmAccesorios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmAccesorios.aspx.designer.cs">
+      <DependentUpon>frmAccesorios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmPersonal.aspx.cs">
+      <DependentUpon>frmPersonal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmPersonal.aspx.designer.cs">
+      <DependentUpon>frmPersonal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmAreaTecnica.aspx.cs">
+      <DependentUpon>frmAreaTecnica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmAreaTecnica.aspx.designer.cs">
+      <DependentUpon>frmAreaTecnica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Equipment\frmEquipoTecnico.aspx.cs">
+      <DependentUpon>frmEquipoTecnico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Equipment\frmEquipoTecnico.aspx.designer.cs">
+      <DependentUpon>frmEquipoTecnico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Equipment\frmEquipoComputo.aspx.cs">
+      <DependentUpon>frmEquipoComputo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Equipment\frmEquipoComputo.aspx.designer.cs">
+      <DependentUpon>frmEquipoComputo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmRedConocimientoSectorial.aspx.cs">
+      <DependentUpon>frmRedConocimientoSectorial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmRedConocimientoSectorial.aspx.designer.cs">
+      <DependentUpon>frmRedConocimientoSectorial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmMacroProceso.aspx.cs">
+      <DependentUpon>frmMacroProceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmMacroProceso.aspx.designer.cs">
+      <DependentUpon>frmMacroProceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmProceso.aspx.cs">
+      <DependentUpon>frmProceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmProceso.aspx.designer.cs">
+      <DependentUpon>frmProceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmProcedimiento.aspx.cs">
+      <DependentUpon>frmProcedimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmProcedimiento.aspx.designer.cs">
+      <DependentUpon>frmProcedimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmDocumento.aspx.cs">
+      <DependentUpon>frmDocumento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmDocumento.aspx.designer.cs">
+      <DependentUpon>frmDocumento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmImpresora.aspx.cs">
+      <DependentUpon>frmImpresora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmImpresora.aspx.designer.cs">
+      <DependentUpon>frmImpresora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmSoftware.aspx.cs">
+      <DependentUpon>frmSoftware.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmSoftware.aspx.designer.cs">
+      <DependentUpon>frmSoftware.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmRubro.aspx.cs">
+      <DependentUpon>frmRubro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmRubro.aspx.designer.cs">
+      <DependentUpon>frmRubro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmRegional.aspx.cs">
+      <DependentUpon>frmRegional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmRegional.aspx.designer.cs">
+      <DependentUpon>frmRegional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmRegion.aspx.cs">
+      <DependentUpon>frmRegion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmRegion.aspx.designer.cs">
+      <DependentUpon>frmRegion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmRolSennova.aspx.cs">
+      <DependentUpon>frmRolSennova.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmRolSennova.aspx.designer.cs">
+      <DependentUpon>frmRolSennova.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmProgramaFormacion.aspx.cs">
+      <DependentUpon>frmProgramaFormacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmProgramaFormacion.aspx.designer.cs">
+      <DependentUpon>frmProgramaFormacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmSectorEconomico.aspx.cs">
+      <DependentUpon>frmSectorEconomico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmSectorEconomico.aspx.designer.cs">
+      <DependentUpon>frmSectorEconomico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmTipoAreaTecnica.aspx.cs">
+      <DependentUpon>frmTipoAreaTecnica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmTipoAreaTecnica.aspx.designer.cs">
+      <DependentUpon>frmTipoAreaTecnica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmTipoLicencia.aspx.cs">
+      <DependentUpon>frmTipoLicencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmTipoLicencia.aspx.designer.cs">
+      <DependentUpon>frmTipoLicencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmTipoEquipo.aspx.cs">
+      <DependentUpon>frmTipoEquipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmTipoEquipo.aspx.designer.cs">
+      <DependentUpon>frmTipoEquipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmTiposDocumentos.aspx.cs">
+      <DependentUpon>frmTiposDocumentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmTiposDocumentos.aspx.designer.cs">
+      <DependentUpon>frmTiposDocumentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmTipoPatron.aspx.cs">
+      <DependentUpon>frmTipoPatron.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmTipoPatron.aspx.designer.cs">
+      <DependentUpon>frmTipoPatron.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmTipoVisitante.aspx.cs">
+      <DependentUpon>frmTipoVisitante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmTipoVisitante.aspx.designer.cs">
+      <DependentUpon>frmTipoVisitante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmTipoDocumento.aspx.cs">
+      <DependentUpon>frmTipoDocumento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmTipoDocumento.aspx.designer.cs">
+      <DependentUpon>frmTipoDocumento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configurations\frmTipoProducto.aspx.cs">
+      <DependentUpon>frmTipoProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configurations\frmTipoProducto.aspx.designer.cs">
+      <DependentUpon>frmTipoProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Documents\frmDocumentos.aspx.cs">
+      <DependentUpon>frmDocumentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Documents\frmDocumentos.aspx.designer.cs">
+      <DependentUpon>frmDocumentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Equipment\frmRegistrosEquipoComputo.aspx.cs">
+      <DependentUpon>frmRegistrosEquipoComputo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Equipment\frmRegistrosEquipoComputo.aspx.designer.cs">
+      <DependentUpon>frmRegistrosEquipoComputo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GetInto\frmIngresos.aspx.cs">
+      <DependentUpon>frmIngresos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\GetInto\frmIngresos.aspx.designer.cs">
+      <DependentUpon>frmIngresos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GetInto\frmRegistrosIngresos.aspx.cs">
+      <DependentUpon>frmRegistrosIngresos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\GetInto\frmRegistrosIngresos.aspx.designer.cs">
+      <DependentUpon>frmRegistrosIngresos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operational\frmCotizacion.aspx.cs">
+      <DependentUpon>frmCotizacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Operational\frmCotizacion.aspx.designer.cs">
+      <DependentUpon>frmCotizacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operational\frmOrdenTrabajo.aspx.cs">
+      <DependentUpon>frmOrdenTrabajo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Operational\frmOrdenTrabajo.aspx.designer.cs">
+      <DependentUpon>frmOrdenTrabajo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operational\frmRegistrosCotizacion.aspx.cs">
+      <DependentUpon>frmRegistrosCotizacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Operational\frmRegistrosCotizacion.aspx.designer.cs">
+      <DependentUpon>frmRegistrosCotizacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operational\frmRegistrosOrdenTrabajo.aspx.cs">
+      <DependentUpon>frmRegistrosOrdenTrabajo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Operational\frmRegistrosOrdenTrabajo.aspx.designer.cs">
+      <DependentUpon>frmRegistrosOrdenTrabajo.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Business\SoportesProductos\" />
+    <Folder Include="Views\Documents\DetallesDocumentos\" />
+    <Folder Include="Views\Equipment\ImagenesEquipoTecnico\" />
+    <Folder Include="Views\Equipment\SoportesEquipoTecnico\" />
+    <Folder Include="Views\Operational\SoportesCotizacion\" />
+    <Folder Include="Views\Operational\SoportesOT\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logic\Logic.csproj">
+      <Project>{cdf0a2ce-2950-4625-bb59-cbd5609a7755}</Project>
+      <Name>Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{fa93e8fe-c79f-4a37-89f6-21ef54810763}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{3d5da423-064f-40b5-8e7b-967cc26645ec}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50936</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44343/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

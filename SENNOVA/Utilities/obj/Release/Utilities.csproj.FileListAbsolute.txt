@@ -1,0 +1,7 @@
+C:\Users\Jhon Corredor\Documents\Visual Studio 2019\SENNOVA\SENNOVA\Utilities\bin\Release\Utilities.dll.config
+C:\Users\Jhon Corredor\Documents\Visual Studio 2019\SENNOVA\SENNOVA\Utilities\bin\Release\Utilities.dll
+C:\Users\Jhon Corredor\Documents\Visual Studio 2019\SENNOVA\SENNOVA\Utilities\bin\Release\Utilities.pdb
+C:\Users\Jhon Corredor\Documents\Visual Studio 2019\SENNOVA\SENNOVA\Utilities\obj\Release\Utilities.csproj.CoreCompileInputs.cache
+C:\Users\Jhon Corredor\Documents\Visual Studio 2019\SENNOVA\SENNOVA\Utilities\obj\Release\Utilities.dll
+C:\Users\Jhon Corredor\Documents\Visual Studio 2019\SENNOVA\SENNOVA\Utilities\obj\Release\Utilities.pdb
+C:\Users\Jhon Corredor\Documents\Visual Studio 2019\SENNOVA\SENNOVA\Utilities\obj\Release\Utilities.csproj.AssemblyReference.cache

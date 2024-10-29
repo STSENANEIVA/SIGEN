@@ -1,0 +1,559 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Web.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> SENNOVA</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--DataTable Css-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/jszip-2.5.0/dt-1.12.1/af-2.4.0/b-2.2.3/b-colvis-2.2.3/b-html5-2.2.3/b-print-2.2.3/cr-1.5.6/r-2.3.0/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/styleDataTable.css" />
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form runat="server">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jszip-2.5.0/dt-1.12.1/af-2.4.0/b-2.2.3/b-colvis-2.2.3/b-html5-2.2.3/b-print-2.2.3/cr-1.5.6/datatables.min.js"></script>
+        <%--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>--%>
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script type="text/javascript" src="/Scripts/alerts.js"></script>
+        <nav class="navbar navbar-expand-md" style="margin-bottom: 2px!important; background-color:white;">
+            <a runat="server" class="text-decoration-none" href="/" style="color: #FF6B00; padding: 10px 15px;">
+                <div class="d-flex" style="height: 59px;">
+                    <asp:Image ID="logo" runat="server" ImageUrl="~/Img/sena.jpeg" />
+                    <hr style="height:58px; width:.16vw; border-width:0; margin-left: 7px; opacity: 0.5!important; background-color:black; margin-top: 3px!important;"/>
+                    <div class="d-flex flex-column">
+                        <h3 style="display: inline-block; margin-left: 8px; margin-top: 10px;">Servicios Tecnológicos</h3>
+                        <h3 style="display: inline-block; margin-left: 8px; margin-top: -7px; color:black!important;">Neiva</h3>
+                    </div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" style="color: #FF6B00; font-size: 29px!important; margin-left: auto;" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon" style="padding: 8px 0px;"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <asp:LoginView runat="server" ViewStateMode="Disabled">
+                    <AnonymousTemplate>
+                        <ul class="nav" style="margin-left: auto;">
+                            <a runat="server" class="nav-link text-decoration-none h4" href="~/Account/Login" style="color: #FF6B00; margin-top: 11px"><i class="fas fa-sign-in-alt"></i>Ingresar</a>
+                        </ul>
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        <ul class="nav" style="margin-left: auto;">
+                            <li class="nav-item dropdown">
+                                <a href="/" runat="server" class="nav-link dropdown-toggle h3 mt-3" style="color: #FF6B00; " id="navbarDropdown3" role="button" data-bs-toggle="dropdown"  aria-expanded="false"></a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown3" style="right: 0!important; left: auto!important;">
+                                    <li class="dropdown-item h5" id="logout">
+                                        <asp:LoginStatus class="dropdown-item"  runat="server" LogoutAction="Redirect" LogoutText="<i class='fas fa-sign-out-alt'></i> Salir" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+        </nav>
+
+        <asp:loginview runat="server" ViewStateMode="Disabled">
+            <AnonymousTemplate>
+                <nav class="navbar navbar-expand-md" style="background-color: #FF6B00; border-radius: 0px!important; margin-bottom: 0px!important;">
+                    <div class="container-fluid justify-content-around align-items-center">
+                        <div><a runat="server" class="nav-link text-white h4 text-decoration-none" href="~/Default.aspx"><i class="fas fa-home"></i> Inicio</a></div>
+                        <div><a runat="server" class="nav-link text-white h4 text-decoration-none" href="~/Servicios.aspx"><i class="fas fa-flask"></i> Servicios</a></div>
+                        <div><a runat="server" class="nav-link text-white h4 text-decoration-none" href="~/About.aspx"><i class="fas fa-users"></i> Nosotros</a></div>
+                        <div><a runat="server" class="nav-link text-white h4 text-decoration-none" href="~/News.aspx"><i class="fas fa-newspaper"></i> Noticias</a></div>
+                        <div><a runat="server" class="nav-link text-white h4 text-decoration-none" href="~/Contact.aspx"><i class="fas fa-envelope"></i> Contactenos</a></div>
+                    </div>
+                </nav>
+            </AnonymousTemplate>
+            <LoggedInTemplate>
+                <nav class="navbar navbar-expand-md" style="background-color: #FF6B00; border-radius: 0px!important; margin-bottom: 0px!important;">
+                    <ul class="nav container-fluid justify-content-around align-items-center" id="menuSoft">
+                            <li class="nav-item dropdown h4">
+                                <a href="/" runat="server" class="nav-link dropdown-toggle" style="color: white; " id="navbarDropdown2" role="button" data-bs-toggle="dropdown"  aria-expanded="false"><i class="fas fa-chart-bar"></i> Sennova</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="menuSennova">
+                                    
+                                    <li class="dropdown-item h5" style="margin-right: 0px!important; text-align: start!important;">
+                                        <div class="btn-group dropend">
+                                            <a href="/" runat="server" class="nav-link dropdown-toggle text-decoration-none h5" role="button" id="dropdownMenuClickable" data-bs-toggle="dropdown"  aria-expanded="false">Proyectos</a>
+
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickable">
+                                                <li class="dropdown-item h5">
+                                                    <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmRubro.aspx">Rubro</a>
+                                                </li>
+                                                <li class="dropdown-item h5">
+                                                    <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmRegion.aspx">Region</a>
+                                                </li>
+
+                                                <li class="dropdown-item h5">
+                                                    <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmRegional.aspx">Regional</a>
+                                                </li>
+
+                                                <li class="dropdown-item h5">
+                                                    <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmCentroFormacion.aspx">Centros de Formación</a>
+                                                </li>
+
+                                                <li class="dropdown-item h5">
+                                                    <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmLineaProgramatica.aspx">Lineas Programaticas</a>
+                                                </li>
+
+                                                <li class="dropdown-item h5">
+                                                    <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmAreaConocimiento.aspx">Areas Conocimiento</a>
+                                                </li>
+                                                <li class="dropdown-item h5">
+                                                    <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmRedConocimientoSectorial.aspx">Red de Conocimiento Sectorial</a>
+                                                </li>
+                                                <li class="dropdown-item h5">
+                                                    <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmTipoProducto.aspx">Tipos de Producto</a>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item h5" href="~/Views/Business/frmProyecto.aspx">Nuevo</a>
+                                    </li>
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item h5" href="~/Views/Business/frmDatosProyectos.aspx">Mis Proyectos</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown h4">
+                                <a href="#" runat="server" class="nav-link dropdown-toggle" style="color: white;" id="A4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-chart-line"></i> Gestión Operativa</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="menuGestionOerativa">
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item h5" href="~/Views/Operational/frmRegistrosCotizacion.aspx">Cotizaciones</a>
+                                    </li>
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item h5" href="~/Views/Operational/frmRegistrosOrdenTrabajo.aspx">Ordenes de Trabajo</a>
+                                    </li>
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item h5" href="~/Views/Configurations/frmTerminoCondicion.aspx">Terminos y Condiciones</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown h4">
+                                <a href="#" runat="server" class="nav-link dropdown-toggle" style="color: white;" id="A2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="far fa-file-alt"></i> Gestión Documental
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="menuGestionDocumental">
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item h5" href="~/Views/Configurations/frmDocumento.aspx">Documentos</a>
+                                    </li>
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item h5" href="~/Views/Documents/frmDocumentos.aspx">Repositorio</a>
+                                    </li>
+
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item h5" href="~/Views/Configurations/frmProcedimiento.aspx">Procedimientos</a>
+                                    </li>
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item h5" href="~/Views/Configurations/frmProceso.aspx">Procesos</a>
+                                    </li>
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item h5" href="~/Views/Configurations/frmMacroProceso.aspx">Macro Procesos</a>
+                                    </li>
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item h5" href="~/Views/Configurations/frmTiposDocumentos.aspx">Tipos de Documentos</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown h4">
+                                <a href="#" runat="server" class="nav-link dropdown-toggle" style="color: white; " id="A3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-laptop"></i> Equipos
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="menuEquipos">
+                                    <li class="dropdown-item h5" style="margin-right: 0px!important; text-align: start!important; padding: 0rem 1rem!important;">
+                                        <div class="btn-group dropend">
+                                            <a href="/" runat="server" style="color: #333333;" class="nav-link dropdown-toggle text-decoration-none h5" role="button" id="A5" data-bs-toggle="dropdown" aria-expanded="false">Configuraciones Generales </a>
+
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickable">
+                                                <li class="dropdown-item h5">
+                                                    <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmTipoLicencia.aspx">Tipos de Licencias</a>
+                                                </li>
+                                                <li class="dropdown-item h5">
+                                                    <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmTipoEquipo.aspx">Tipos de Equipos</a>
+                                                </li>
+
+                                                <li class="dropdown-item h5">
+                                                    <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmAccesorios.aspx">Accesorios</a>
+                                                </li>
+
+                                                <li class="dropdown-item h5">
+                                                    <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmImpresora.aspx">Impresoras</a>
+                                                </li>
+
+                                                <li class="dropdown-item h5">
+                                                    <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmSoftware.aspx">Software</a>
+                                                </li>
+
+                                                <li class="dropdown-item h5">
+                                                    <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmTipoPatron.aspx">Tipos de Patrones</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item h5" href="~/Views/Equipment/frmRegistrosEquipoComputo.aspx">Equipos Cómputo</a>
+                                    </li>
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item h5" href="~/Views/Equipment/frmEquipotecnico.aspx">Equipos Técnicos</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown h4">
+                                <a href="#" runat="server" class="nav-link dropdown-toggle" style="color: white;" id="A1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-door-open"></i> Ingresos
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="menuIngresos">
+                                    <li class="dropdown-item h5">
+                                        <a class="dropdown-item h5" runat="server" href="~/Views/GetInto/frmIngresos.aspx">Visitante</a>
+                                    </li>
+                                    <li class="dropdown-item h5">
+                                        <a class="dropdown-item h5" runat="server" href="~/Views/GetInto/frmRegistrosIngresos.aspx">Control de Acceso</a>
+                                    </li>
+                                    <li class="dropdown-item h5">
+                                        <a class="dropdown-item h5" runat="server" href="~/Views/Configurations/frmProgramaFormacion.aspx">Programa de Formación</a>
+                                    </li>
+                                    <li class="dropdown-item h5">
+                                        <a class="dropdown-item h5" runat="server" href="~/Views/Configurations/frmTipoVisitante.aspx">Tipos de Visitante</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown h4">
+                                <a class="nav-link dropdown-toggle" style="color: white;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-cog"></i> Configuraciones
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="menuConfiguracion">
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmEmpresa.aspx">Empresa</a>
+                                    </li>
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmSectorEconomico.aspx">Sector Económico</a>
+                                    </li>
+
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmAreaTecnica.aspx">Áreas Técnicas</a>
+                                    </li>
+
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmFamilia.aspx">Familia de Servicios</a>
+                                    </li>
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmServicio.aspx">Servicios</a>
+                                    </li>
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmTipoAreaTecnica.aspx">Tipos de Area Técnica</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmPersona.aspx">Gestión de Usuario</a>
+                                    </li>
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmPersonal.aspx">Personal</a>
+                                    </li>
+
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmCargo.aspx">Cargos</a>
+                                    </li>
+
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmRolSennova.aspx">Roles Sennova</a>
+                                    </li>
+
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item" href="~/Views/Configurations/frmTipoDocumento.aspx">Tipos de Identificación</a>
+                                    </li>
+                                    <li class="dropdown-item h5">
+                                        <a runat="server" class="dropdown-item" href="~/Account/Register.aspx">Registrar Usuarios</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                </nav>
+            </LoggedInTemplate>
+        </asp:loginview>
+
+
+        <asp:ContentPlaceHolder ID="BannerContent" runat="server"></asp:ContentPlaceHolder>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <hr />
+        <footer>
+            <div class="d-flex">
+                <div class="col-md-4 text-center">
+                    <img class="img-fluid" src="/img/sena.jpeg" style="width: 30%">
+                </div>
+                <div class="col-md-4 text-center mt-4">
+
+                    <h4>
+                        <b>Servicio Nacional de
+                                Aprendizaje SENA
+                                <br>
+                            Centro de la Industria, la Empresa y los Servicios<br>
+                            Cra 9 # 68 50 - Sede Industria Neiva-Huila<br>
+                            © SENA <%: DateTime.Now.Year %> | Todos los derechos reservados
+                        </b>
+                    </h4>
+                    <div class="d-flex justify-content-center align-items-center mt-3">
+                        <div>
+                            <a style="font-size: 30px; color: #FF6B00; padding: 0.375rem 0.75rem" target="_blank" href="https://web.facebook.com/SENA/?_rdc=1&_rdr"><i class="fab fa-facebook"></i></a>
+                        </div>
+                        <div>
+                            <a style="font-size: 30px; color: #FF6B00; padding: 0.375rem 0.75rem" target="_blank" href="https://www.instagram.com/senacomunica/"><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <div>
+                            <a style="font-size: 30px; color: #FF6B00; padding: 0.375rem 0.75rem" target="_blank" href="https://twitter.com/SENAComunica"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img class="img-fluid" src="/img/sennova.png" style="width: 75%">
+                </div>
+            </div>
+        </footer>
+        <div id="mensaje"></div>
+        <a href="https://api.whatsapp.com/send?phone=573105656925" id="btnWhatsapp" target="_blank" style="position: fixed; width: 55px; height: 55px; bottom: 30px; right: 30px; border-radius: 50px; color: #fff; background: #0df053; font-size: 30px; box-shadow: 0px 1px 10px rgba(0,0,0,0.3); z-index: 100; text-align: center;"><i class="fab fa-whatsapp" style="margin-top: 12px; margin-left: 2px;"></i></a>
+        <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control"></asp:TextBox>
+    </form>
+</body>
+</html>
+<style>
+    .dropdown-menu > li > a{
+        background-color: transparent!important;
+    }
+    .dropdown-menu > li{
+        margin-right: 0px!important;
+        text-align: start!important;
+        padding: 0rem 1rem!important;
+    }
+    #menuSoft>li>a:hover{
+        color:#FF6B00!important;
+    }
+    #menuSoft>li>a:focus{
+        color:#FF6B00!important;
+    }
+    #txtUsername{
+        display:none;
+    }
+    .swal2-styled.swal2-confirm{
+        background-color: #FF6B00!important;
+    }
+    .swal2-styled.swal2-confirm:focus {
+        box-shadow: 0 0 0 3px #ff6b0075;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        if ($("#txtUsername").val() != '') {
+            getUsername()
+        }
+
+        $("#btnWhatsapp").on({
+            mouseenter: function () {
+                $("#mensaje").html('<a href="https://api.whatsapp.com/send?phone=573105656925" target="_blank" style="position: fixed; width: 150px; height: 55px; bottom: 90px; right: 30px; background-color:#fff; color: black;font-size: 16px; box-shadow: 0px 1px 10px rgba(0,0,0,0.3); z-index: 100; text-align: center; text-decoration: none; border-radius:10px;">Hola, ¿en que podemos ayudarte?</a>')
+            },
+            mouseleave: function () {
+                $("#mensaje").html('')
+            }
+        });
+
+        $(document).on('click', '#ctl16_dropdownMenuClickable', function () {
+            $("#menuSennova").addClass('show');
+        })
+
+        $("#ctl16_navbarDropdown2").on({
+            mouseenter: function () {
+                $("#menuSennova").addClass('show');
+            },
+            mouseleave: function () {
+                $("#menuSennova").removeClass('show');
+            }
+        })
+
+        $("#menuSennova").on({
+            mouseenter: function () {
+                $("#menuSennova").addClass('show');
+            },
+            mouseleave: function () {
+                $("#menuSennova").removeClass('show');
+            }
+        })
+
+        $("#ctl16_A4").on({
+            mouseenter: function () {
+                $("#menuGestionOerativa").addClass('show');
+            },
+            mouseleave: function () {
+                $("#menuGestionOerativa").removeClass('show');
+            }
+        })
+
+        $("#menuGestionOerativa").on({
+            mouseenter: function () {
+                $("#menuGestionOerativa").addClass('show');
+            },
+            mouseleave: function () {
+                $("#menuGestionOerativa").removeClass('show');
+            }
+        })
+
+        $("#ctl16_A2").on({
+            mouseenter: function () {
+                $("#menuGestionDocumental").addClass('show');
+            },
+            mouseleave: function () {
+                $("#menuGestionDocumental").removeClass('show');
+            }
+        })
+
+        $("#menuGestionDocumental").on({
+            mouseenter: function () {
+                $("#menuGestionDocumental").addClass('show');
+            },
+            mouseleave: function () {
+                $("#menuGestionDocumental").removeClass('show');
+            }
+        })
+
+        $("#ctl16_A3").on({
+            mouseenter: function () {
+                $("#menuEquipos").addClass('show');
+            },
+            mouseleave: function () {
+                $("#menuEquipos").removeClass('show');
+            }
+        })
+
+        $("#menuEquipos").on({
+            mouseenter: function () {
+                $("#menuEquipos").addClass('show');
+            },
+            mouseleave: function () {
+                $("#menuEquipos").removeClass('show');
+            }
+        })
+
+        $("#ctl16_A1").on({
+            mouseenter: function () {
+                $("#menuIngresos").addClass('show');
+            },
+            mouseleave: function () {
+                $("#menuIngresos").removeClass('show');
+            }
+        })
+
+        $("#menuIngresos").on({
+            mouseenter: function () {
+                $("#menuIngresos").addClass('show');
+            },
+            mouseleave: function () {
+                $("#menuIngresos").removeClass('show');
+            }
+        })
+
+        $("#navbarDropdown").on({
+            mouseenter: function () {
+                $("#menuConfiguracion").addClass('show');
+            },
+            mouseleave: function () {
+                $("#menuConfiguracion").removeClass('show');
+            }
+        })
+
+        $("#menuConfiguracion").on({
+            mouseenter: function () {
+                $("#menuConfiguracion").addClass('show');
+            },
+            mouseleave: function () {
+                $("#menuConfiguracion").removeClass('show');
+            }
+        })
+
+
+
+        $(document).on('click', '#ctl16_A5', function () {
+            $("#menuEquipos").addClass('show');
+        })
+
+        $(document).on('click', '#ctl16_navbarDropdown2', function () {
+            $("#menuEquipos").removeClass('show');
+        })
+
+        $(document).on('click', '#ctl16_A3', function () {
+            $("#menuSennova").removeClass('show');
+        })
+
+
+        $(document).on('click', '#ctl16_A4', function () {
+            $("#menuSennova").removeClass('show');
+            $("#menuEquipos").removeClass('show');
+        })
+        $(document).on('click', '#ctl16_A2', function () {
+            $("#menuSennova").removeClass('show');
+            $("#menuEquipos").removeClass('show');
+        })
+        
+        $(document).on('click', '#ctl16_A1', function () {
+            $("#menuSennova").removeClass('show');
+            $("#menuEquipos").removeClass('show');
+        })
+        $(document).on('click', '#navbarDropdown', function () {
+            $("#menuSennova").removeClass('show');
+            $("#menuEquipos").removeClass('show');
+        })
+
+    });
+    function getUsername() {
+        const username = $("#txtUsername").val().toLowerCase();
+        const palabras = username.split(" ");
+
+        for (let i = 0; i < palabras.length; i++) {
+            palabras[i] = palabras[i][0].toUpperCase() + palabras[i].substr(1);
+        }
+
+        var usernameFormat = palabras.join(" ");
+
+        $("#ctl15_navbarDropdown3").html('<i class="fas fa-user-circle"></i> ' + usernameFormat);
+    }
+</script>

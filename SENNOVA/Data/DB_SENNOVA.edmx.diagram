@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9958495a8dbb41b58afda1e08db215d3" Name="Diagram1" ZoomLevel="92" >
+        <EntityTypeShape EntityType="DB_SENNOVA.tblProyecto" Width="2.5" PointX="37.875" PointY="23.5" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblRegion" Width="1.5" PointX="40.75" PointY="32" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblRegional" Width="1.5" PointX="38.375" PointY="32" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblCentroFormacion" Width="1.875" PointX="38.375" PointY="28.75" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblLineaProgramatica" Width="2.125" PointX="33.75" PointY="24.75" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblAreaConocimiento" Width="2.25" PointX="34.25" PointY="29.875" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblRolSennova" Width="1.625" PointX="36.375" PointY="15.5" />
+        <AssociationConnector Association="DB_SENNOVA.tblProyectotblCentroFormacion" />
+        <AssociationConnector Association="DB_SENNOVA.tblProyectotblLineaProgramatica" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblRedConocimientoSectorial" Width="2.5" PointX="40.75" PointY="28.75" />
+        <AssociationConnector Association="DB_SENNOVA.tblProyectotblRedConocimientoSectorial" />
+        <AssociationConnector Association="DB_SENNOVA.tblProyectotblAreaConocimiento" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblPersona" Width="1.75" PointX="47.125" PointY="18.625" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblTipoDocumento" Width="1.5" PointX="46.75" PointY="15.25" />
+        <AssociationConnector Association="DB_SENNOVA.tblPersonatblTipoDocumento" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblObjetivoEspecifico" Width="2.125" PointX="34" PointY="27.375" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblActividad" Width="1.875" PointX="31" PointY="27.375" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblProducto" Width="1.5" PointX="28.5" PointY="27.5" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblTipoProducto" Width="1.75" PointX="25.5" PointY="27.5" />
+        <AssociationConnector Association="DB_SENNOVA.tblProductotblTipoProducto" />
+        <AssociationConnector Association="DB_SENNOVA.tblObjetivoEspecificotblProyecto" />
+        <AssociationConnector Association="DB_SENNOVA.tblProductotblActividad" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblAvanceProyecto" Width="2.5" PointX="30.875" PointY="30.375" />
+        <AssociationConnector Association="DB_SENNOVA.tblAvanceProyectotblActividad" />
+        <AssociationConnector Association="DB_SENNOVA.tblRegionaltblRegion" />
+        <AssociationConnector Association="DB_SENNOVA.tblCentroFormaciontblRegional" />
+        <AssociationConnector Association="DB_SENNOVA.tblActividadtblObjetivoEspecifico" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblRubro" Width="1.5" PointX="41.5" PointY="26.25" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblProyectoRubro" Width="2" PointX="41.125" PointY="23.625" />
+        <AssociationConnector Association="DB_SENNOVA.tblProyectoRubrotblProyecto" />
+        <AssociationConnector Association="DB_SENNOVA.tblProyectoRubrotblRubro" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblIngreso" Width="1.5" PointX="49.625" PointY="15.25" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblAreaTecnica" Width="1.5" PointX="45.125" PointY="11.875" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblTipoAreaTecnica" Width="1.75" PointX="45.625" PointY="8.25" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblServicio" Width="1.75" PointX="44" PointY="15.125" />
+        <AssociationConnector Association="DB_SENNOVA.tblAreaTecnicatblTipoAreaTecnica" />
+        <AssociationConnector Association="DB_SENNOVA.tblServiciotblAreaTecnica" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblIngresosAreasTecnicas" Width="1.875" PointX="47.875" PointY="12.625" />
+        <AssociationConnector Association="DB_SENNOVA.tblIngresosAreasTecnicastblAreaTecnica" />
+        <AssociationConnector Association="DB_SENNOVA.tblIngresosAreasTecnicastblIngreso" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblProgramaFormacion" Width="2.375" PointX="49.875" PointY="20.125" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblEmpleado" Width="2.25" PointX="41.125" PointY="17.5" />
+        <AssociationConnector Association="DB_SENNOVA.tblProyectotblEmpleado" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblVisitante" Width="1.5" PointX="51.875" PointY="17.5" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblTipoVisitante" Width="1.5" PointX="54" PointY="16.625" />
+        <AssociationConnector Association="DB_SENNOVA.tblVisitantetblTipoVisitante" />
+        <AssociationConnector Association="DB_SENNOVA.tblIngresotblVisitante" />
+        <AssociationConnector Association="DB_SENNOVA.tblIngresotblProgramaFormacion" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblEmpresa" Width="1.5" PointX="51.75" PointY="13.625" />
+        <AssociationConnector Association="DB_SENNOVA.tblIngresotblEmpresa" />
+        <AssociationConnector Association="DB_SENNOVA.tblAreaTecnicatblEmpleado" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblSectorEconomico" Width="1.875" PointX="53.75" PointY="13.625" />
+        <AssociationConnector Association="DB_SENNOVA.tblEmpresatblSectorEconomico" />
+        <AssociationConnector Association="DB_SENNOVA.tblVisitantetblPersona" />
+        <AssociationConnector Association="DB_SENNOVA.tblEmpleadotblPersona" />
+        <AssociationConnector Association="DB_SENNOVA.tblIngresotblEmpleado" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblDocumento" Width="2" PointX="31.375" PointY="20" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblTiposDocumentos" Width="1.75" PointX="29" PointY="20" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblMacroProcesos" Width="1.5" PointX="26.25" PointY="23.125" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblProcesos" Width="1.5" PointX="28.5" PointY="23.25" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblProcedimiento" Width="1.75" PointX="31" PointY="23.125" />
+        <AssociationConnector Association="DB_SENNOVA.tblDocumentotblTiposDocumentos" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblDetallesDocumento" Width="1.875" PointX="34.125" PointY="19.875" />
+        <AssociationConnector Association="DB_SENNOVA.tblDetallesDocumentotblDocumento" />
+        <AssociationConnector Association="DB_SENNOVA.tblDocumentotblProcedimiento" />
+        <AssociationConnector Association="DB_SENNOVA.tblDetallesDocumentotblEmpleado" />
+        <AssociationConnector Association="DB_SENNOVA.tblDetallesDocumentotblEmpleado1" />
+        <AssociationConnector Association="DB_SENNOVA.tblDetallesDocumentotblEmpleado2" />
+        <AssociationConnector Association="DB_SENNOVA.tblProcedimientotblProcesos" />
+        <AssociationConnector Association="DB_SENNOVA.tblProcesostblMacroProcesos" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblImpresora" Width="1.5" PointX="37.625" PointY="4.5" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblSoftware" Width="1.5" PointX="32.75" PointY="7" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblTipoLicencia" Width="1.5" PointX="30.625" PointY="7" />
+        <AssociationConnector Association="DB_SENNOVA.tblSoftwaretblTipoLicencia" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblTipoEquipo" Width="1.5" PointX="37.625" PointY="12.125" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblEquipo" Width="1.875" PointX="40.25" PointY="8.25" />
+        <AssociationConnector Association="DB_SENNOVA.tblEquipotblTipoEquipo" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblEquipoSoftware" Width="1.75" PointX="34.75" PointY="7" />
+        <AssociationConnector Association="DB_SENNOVA.tblEquipoSoftwaretblSoftware" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblCalibracion" Width="1.75" PointX="31.125" PointY="12.125" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblMantenimiento" Width="1.875" PointX="33.75" PointY="16.375" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblMantenimientoEquipo" Width="2" PointX="33.625" PointY="14.125" />
+        <AssociationConnector Association="DB_SENNOVA.tblMantenimientoEuipotblEquipo" />
+        <AssociationConnector Association="DB_SENNOVA.tblMantenimientoEuipotblMantenimiento" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblCalibracionEquipo" Width="1.875" PointX="33.75" PointY="12.125" />
+        <AssociationConnector Association="DB_SENNOVA.tblCalibracionEquipotblCalibracion" />
+        <AssociationConnector Association="DB_SENNOVA.tblCalibracionEquipotblEquipo" />
+        <AssociationConnector Association="DB_SENNOVA.tblEquipotblEmpleado" />
+        <AssociationConnector Association="DB_SENNOVA.tblMantenimientotblEmpleado" />
+        <AssociationConnector Association="DB_SENNOVA.tblEmpleadotblMantenimiento" />
+        <AssociationConnector Association="DB_SENNOVA.tblEquipotblAreaTecnica" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblComputo" Width="1.5" PointX="37.75" PointY="7.125" />
+        <AssociationConnector Association="DB_SENNOVA.tblComputotblEquipo" />
+        <AssociationConnector Association="DB_SENNOVA.tblComputotblImpresora" />
+        <AssociationConnector Association="DB_SENNOVA.tblEquipoSoftwaretblComputo" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblEquipoTecnico" Width="1.875" PointX="43.125" PointY="6.5" />
+        <AssociationConnector Association="DB_SENNOVA.tblEquipoTecnicotblEquipo" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblTipoPatron" Width="1.5" PointX="43.25" PointY="3.875" />
+        <AssociationConnector Association="DB_SENNOVA.tblEquipoTecnicotblTipoPatron" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblAccesorios" Width="1.75" PointX="32" PointY="9.75" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblEquipoAccesorio" Width="1.5" PointX="34.5" PointY="9.875" IsExpanded="true" />
+        <AssociationConnector Association="DB_SENNOVA.tblEquipoAccesoriotblEquipo" />
+        <AssociationConnector Association="DB_SENNOVA.tblEquipoAccesoriotblAccesorios" />
+        <EntityTypeShape EntityType="DB_SENNOVA.C__MigrationHistory" Width="1.5" PointX="19.375" PointY="11" />
+        <EntityTypeShape EntityType="DB_SENNOVA.AspNetRoles" Width="1.5" PointX="19" PointY="13.375" />
+        <EntityTypeShape EntityType="DB_SENNOVA.AspNetUserClaims" Width="1.5" PointX="23.5" PointY="11.875" />
+        <EntityTypeShape EntityType="DB_SENNOVA.AspNetUserLogins" Width="1.5" PointX="23.5" PointY="14.625" />
+        <EntityTypeShape EntityType="DB_SENNOVA.AspNetUsers" Width="1.5" PointX="21.25" PointY="12.25" />
+        <AssociationConnector Association="DB_SENNOVA.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="DB_SENNOVA.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="DB_SENNOVA.AspNetUserRoles" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblCotizacion" Width="2.375" PointX="44.625" PointY="22.125" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblTerminoCondicion" Width="1.875" PointX="44.5" PointY="29" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblTerminoCotizacion" Width="1.875" PointX="44.5" PointY="26.75" />
+        <AssociationConnector Association="DB_SENNOVA.tblTerminoCotizaciontblTerminoCondicion" />
+        <AssociationConnector Association="DB_SENNOVA.tblTerminoCotizaciontblCotizacion" />
+        <AssociationConnector Association="DB_SENNOVA.tblCotizaciontblProgramaFormacion" />
+        <AssociationConnector Association="DB_SENNOVA.tblCotizaciontblEmpleado" />
+        <AssociationConnector Association="DB_SENNOVA.tblCotizaciontblEmpleado1" />
+        <AssociationConnector Association="DB_SENNOVA.tblCotizaciontblEmpleado2" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblCotizacionDetalle" Width="2" PointX="44.125" PointY="19" />
+        <AssociationConnector Association="DB_SENNOVA.tblCotizacionDetalletblCotizacion" />
+        <AssociationConnector Association="DB_SENNOVA.tblServiciotblCotizacionDetalle" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblCliente" Width="1.5" PointX="47.5" PointY="22.5" />
+        <AssociationConnector Association="DB_SENNOVA.tblClientetblPersona" />
+        <AssociationConnector Association="DB_SENNOVA.tblCotizaciontblCliente" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblCargo" Width="1.5" PointX="38.75" PointY="15.375" />
+        <AssociationConnector Association="DB_SENNOVA.tblEmpleadotblCargo" />
+        <AssociationConnector Association="DB_SENNOVA.tblEmpleadotblRolSennova" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblOrdenTrabajo" Width="2" PointX="48.75" PointY="24.625" />
+        <AssociationConnector Association="DB_SENNOVA.tblOrdenTrabajotblAreaTecnica" />
+        <AssociationConnector Association="DB_SENNOVA.tblOrdenTrabajotblCotizacion" />
+        <AssociationConnector Association="DB_SENNOVA.tblOrdenTrabajotblEmpleado" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblOrdenTrabajoDetalles" Width="1.5" PointX="51.5" PointY="24.625" />
+        <AssociationConnector Association="DB_SENNOVA.tblOrdenTrabajoDetallestblOrdenTrabajo" />
+        <EntityTypeShape EntityType="DB_SENNOVA.tblFamilia" Width="1.5" PointX="42" PointY="13" />
+        <AssociationConnector Association="DB_SENNOVA.tblServiciotblFamilia" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

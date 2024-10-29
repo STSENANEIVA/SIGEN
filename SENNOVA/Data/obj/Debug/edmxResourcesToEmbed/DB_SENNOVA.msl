@@ -1,0 +1,1306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_SENNOVAStoreContainer" CdmEntityContainer="DB_SENNOVAContainer">
+    <EntitySetMapping Name="tblProyecto">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblProyecto)">
+        <MappingFragment StoreEntitySet="tblProyecto">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TituloProyecto" ColumnName="TituloProyecto" />
+          <ScalarProperty Name="CodigoSGPS" ColumnName="CodigoSGPS" />
+          <ScalarProperty Name="AnoEjecucion" ColumnName="AnoEjecucion" />
+          <ScalarProperty Name="FechaDiligenciamiento" ColumnName="FechaDiligenciamiento" />
+          <ScalarProperty Name="ObjetivoGeneral" ColumnName="ObjetivoGeneral" />
+          <ScalarProperty Name="AsignacionInicial" ColumnName="AsignacionInicial" />
+          <ScalarProperty Name="TotalAdiciones" ColumnName="TotalAdiciones" />
+          <ScalarProperty Name="TotalDisminucionesCentralizaciones" ColumnName="TotalDisminucionesCentralizaciones" />
+          <ScalarProperty Name="TotalEjecutado" ColumnName="TotalEjecutado" />
+          <ScalarProperty Name="PresupuestoFinal" ColumnName="PresupuestoFinal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRegion">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblRegion)">
+        <MappingFragment StoreEntitySet="tblRegion">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRegional">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblRegional)">
+        <MappingFragment StoreEntitySet="tblRegional">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCentroFormacion">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblCentroFormacion)">
+        <MappingFragment StoreEntitySet="tblCentroFormacion">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLineaProgramatica">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblLineaProgramatica)">
+        <MappingFragment StoreEntitySet="tblLineaProgramatica">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAreaConocimiento">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblAreaConocimiento)">
+        <MappingFragment StoreEntitySet="tblAreaConocimiento">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRolSennova">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblRolSennova)">
+        <MappingFragment StoreEntitySet="tblRolSennova">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRedConocimientoSectorial">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblRedConocimientoSectorial)">
+        <MappingFragment StoreEntitySet="tblRedConocimientoSectorial">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPersona">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblPersona)">
+        <MappingFragment StoreEntitySet="tblPersona">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="NumeroIdentificacion" ColumnName="NumeroIdentificacion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTipoDocumento">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblTipoDocumento)">
+        <MappingFragment StoreEntitySet="tblTipoDocumento">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblObjetivoEspecifico">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblObjetivoEspecifico)">
+        <MappingFragment StoreEntitySet="tblObjetivoEspecifico">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblActividad">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblActividad)">
+        <MappingFragment StoreEntitySet="tblActividad">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProducto">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblProducto)">
+        <MappingFragment StoreEntitySet="tblProducto">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTipoProducto">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblTipoProducto)">
+        <MappingFragment StoreEntitySet="tblTipoProducto">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAvanceProyecto">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblAvanceProyecto)">
+        <MappingFragment StoreEntitySet="tblAvanceProyecto">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Proyectado" ColumnName="Proyectado" />
+          <ScalarProperty Name="Ejecutado" ColumnName="Ejecutado" />
+          <ScalarProperty Name="EjecutadoPresupuesto" ColumnName="EjecutadoPresupuesto" />
+          <ScalarProperty Name="Adicion" ColumnName="Adicion" />
+          <ScalarProperty Name="Disminucion" ColumnName="Disminucion" />
+          <ScalarProperty Name="Saldo" ColumnName="Saldo" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="ObservacionesPresupuestales" ColumnName="ObservacionesPresupuestales" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRubro">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblRubro)">
+        <MappingFragment StoreEntitySet="tblRubro">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProyectoRubro">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblProyectoRubro)">
+        <MappingFragment StoreEntitySet="tblProyectoRubro">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Objeto" ColumnName="Objeto" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblIngreso">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblIngreso)">
+        <MappingFragment StoreEntitySet="tblIngreso">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="PoliticaDatos" ColumnName="PoliticaDatos" />
+          <ScalarProperty Name="Ficha" ColumnName="Ficha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAreaTecnica">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblAreaTecnica)">
+        <MappingFragment StoreEntitySet="tblAreaTecnica">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTipoAreaTecnica">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblTipoAreaTecnica)">
+        <MappingFragment StoreEntitySet="tblTipoAreaTecnica">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblServicio">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblServicio)">
+        <MappingFragment StoreEntitySet="tblServicio">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Requisitos" ColumnName="Requisitos" />
+          <ScalarProperty Name="Alcance" ColumnName="Alcance" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblIngresosAreasTecnicas">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblIngresosAreasTecnicas)">
+        <MappingFragment StoreEntitySet="tblIngresosAreasTecnicas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProgramaFormacion">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblProgramaFormacion)">
+        <MappingFragment StoreEntitySet="tblProgramaFormacion">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmpleado">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblEmpleado)">
+        <MappingFragment StoreEntitySet="tblEmpleado">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmailLaboral" ColumnName="EmailLaboral" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Ip" ColumnName="Ip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblVisitante">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblVisitante)">
+        <MappingFragment StoreEntitySet="tblVisitante">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTipoVisitante">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblTipoVisitante)">
+        <MappingFragment StoreEntitySet="tblTipoVisitante">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmpresa">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblEmpresa)">
+        <MappingFragment StoreEntitySet="tblEmpresa">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="Nit" ColumnName="Nit" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSectorEconomico">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblSectorEconomico)">
+        <MappingFragment StoreEntitySet="tblSectorEconomico">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDocumento">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblDocumento)">
+        <MappingFragment StoreEntitySet="tblDocumento">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTiposDocumentos">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblTiposDocumentos)">
+        <MappingFragment StoreEntitySet="tblTiposDocumentos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMacroProcesos">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblMacroProcesos)">
+        <MappingFragment StoreEntitySet="tblMacroProcesos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Icono" ColumnName="Icono" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProcesos">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblProcesos)">
+        <MappingFragment StoreEntitySet="tblProcesos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProcedimiento">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblProcedimiento)">
+        <MappingFragment StoreEntitySet="tblProcedimiento">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDetallesDocumento">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblDetallesDocumento)">
+        <MappingFragment StoreEntitySet="tblDetallesDocumento">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="RutaDoc" ColumnName="RutaDoc" />
+          <ScalarProperty Name="Descargable" ColumnName="Descargable" />
+          <ScalarProperty Name="Fisico" ColumnName="Fisico" />
+          <ScalarProperty Name="Digital" ColumnName="Digital" />
+          <ScalarProperty Name="TipoSolicitud" ColumnName="TipoSolicitud" />
+          <ScalarProperty Name="FechaSolicitud" ColumnName="FechaSolicitud" />
+          <ScalarProperty Name="FechaRevision" ColumnName="FechaRevision" />
+          <ScalarProperty Name="FechaAprovacion" ColumnName="FechaAprovacion" />
+          <ScalarProperty Name="CopiaControlada" ColumnName="CopiaControlada" />
+          <ScalarProperty Name="FechaCopiaControlada" ColumnName="FechaCopiaControlada" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblImpresora">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblImpresora)">
+        <MappingFragment StoreEntitySet="tblImpresora">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSoftware">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblSoftware)">
+        <MappingFragment StoreEntitySet="tblSoftware">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTipoLicencia">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblTipoLicencia)">
+        <MappingFragment StoreEntitySet="tblTipoLicencia">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTipoEquipo">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblTipoEquipo)">
+        <MappingFragment StoreEntitySet="tblTipoEquipo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEquipo">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblEquipo)">
+        <MappingFragment StoreEntitySet="tblEquipo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaCompra" ColumnName="FechaCompra" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="NumeroContrato" ColumnName="NumeroContrato" />
+          <ScalarProperty Name="FechaFuncionamiento" ColumnName="FechaFuncionamiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEquipoSoftware">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblEquipoSoftware)">
+        <MappingFragment StoreEntitySet="tblEquipoSoftware">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCalibracion">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblCalibracion)">
+        <MappingFragment StoreEntitySet="tblCalibracion">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="TipoCalibracion" ColumnName="TipoCalibracion" />
+          <ScalarProperty Name="TipoServicio" ColumnName="TipoServicio" />
+          <ScalarProperty Name="NumeroCertificado" ColumnName="NumeroCertificado" />
+          <ScalarProperty Name="Resultados" ColumnName="Resultados" />
+          <ScalarProperty Name="Conforme" ColumnName="Conforme" />
+          <ScalarProperty Name="FechaProxima" ColumnName="FechaProxima" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMantenimiento">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblMantenimiento)">
+        <MappingFragment StoreEntitySet="tblMantenimiento">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="TipoMantenimiento" ColumnName="TipoMantenimiento" />
+          <ScalarProperty Name="Actividad" ColumnName="Actividad" />
+          <ScalarProperty Name="NumeroReporte" ColumnName="NumeroReporte" />
+          <ScalarProperty Name="ClaseMantenimiento" ColumnName="ClaseMantenimiento" />
+          <ScalarProperty Name="AceptacionOferta" ColumnName="AceptacionOferta" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMantenimientoEuipo">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblMantenimientoEquipo)">
+        <MappingFragment StoreEntitySet="tblMantenimientoEuipo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCalibracionEquipo">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblCalibracionEquipo)">
+        <MappingFragment StoreEntitySet="tblCalibracionEquipo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblComputo">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblComputo)">
+        <MappingFragment StoreEntitySet="tblComputo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ip" ColumnName="Ip" />
+          <ScalarProperty Name="CuentaAdmin" ColumnName="CuentaAdmin" />
+          <ScalarProperty Name="Backup" ColumnName="Backup" />
+          <ScalarProperty Name="Procesador" ColumnName="Procesador" />
+          <ScalarProperty Name="Ram" ColumnName="Ram" />
+          <ScalarProperty Name="Disco" ColumnName="Disco" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEquipoTecnico">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblEquipoTecnico)">
+        <MappingFragment StoreEntitySet="tblEquipoTecnico">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClaseEquipo" ColumnName="ClaseEquipo" />
+          <ScalarProperty Name="Caracteristicas" ColumnName="Caracteristicas" />
+          <ScalarProperty Name="Aire" ColumnName="Aire" />
+          <ScalarProperty Name="Electricidad" ColumnName="Electricidad" />
+          <ScalarProperty Name="Gas" ColumnName="Gas" />
+          <ScalarProperty Name="Aceite" ColumnName="Aceite" />
+          <ScalarProperty Name="Otros" ColumnName="Otros" />
+          <ScalarProperty Name="PresionAire" ColumnName="PresionAire" />
+          <ScalarProperty Name="Caudal" ColumnName="Caudal" />
+          <ScalarProperty Name="Voltaje" ColumnName="Voltaje" />
+          <ScalarProperty Name="Amperaje" ColumnName="Amperaje" />
+          <ScalarProperty Name="Potencia" ColumnName="Potencia" />
+          <ScalarProperty Name="TipoGas" ColumnName="TipoGas" />
+          <ScalarProperty Name="PresionGas" ColumnName="PresionGas" />
+          <ScalarProperty Name="TipoAceite" ColumnName="TipoAceite" />
+          <ScalarProperty Name="Especifique" ColumnName="Especifique" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTipoPatron">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblTipoPatron)">
+        <MappingFragment StoreEntitySet="tblTipoPatron">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAccesorios">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblAccesorios)">
+        <MappingFragment StoreEntitySet="tblAccesorios">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEquipoAccesorio">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblEquipoAccesorio)">
+        <MappingFragment StoreEntitySet="tblEquipoAccesorio">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.C__MigrationHistory)">
+        <MappingFragment StoreEntitySet="C__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.AspNetRoles)">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.AspNetUserClaims)">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.AspNetUserLogins)">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.AspNetUsers)">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDetallesDocumentoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblDetallesDocumentoSet)">
+        <MappingFragment StoreEntitySet="tblDetallesDocumentoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="RutaDoc" ColumnName="RutaDoc" />
+          <ScalarProperty Name="Descargable" ColumnName="Descargable" />
+          <ScalarProperty Name="Fisico" ColumnName="Fisico" />
+          <ScalarProperty Name="Digital" ColumnName="Digital" />
+          <ScalarProperty Name="TipoSolicitud" ColumnName="TipoSolicitud" />
+          <ScalarProperty Name="FechaSolicitud" ColumnName="FechaSolicitud" />
+          <ScalarProperty Name="FechaRevision" ColumnName="FechaRevision" />
+          <ScalarProperty Name="FechaAprovacion" ColumnName="FechaAprovacion" />
+          <ScalarProperty Name="CopiaControlada" ColumnName="CopiaControlada" />
+          <ScalarProperty Name="FechaCopiaControlada" ColumnName="FechaCopiaControlada" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="tblDocumento_Id" ColumnName="tblDocumento_Id" />
+          <ScalarProperty Name="tblSolicitante_Id" ColumnName="tblSolicitante_Id" />
+          <ScalarProperty Name="tblRevisor_Id" ColumnName="tblRevisor_Id" />
+          <ScalarProperty Name="tblAprovador_Id" ColumnName="tblAprovador_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCotizacion">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblCotizacion)">
+        <MappingFragment StoreEntitySet="tblCotizacion">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="ValorTotal" ColumnName="ValorTotal" />
+          <ScalarProperty Name="ValidezOferta" ColumnName="ValidezOferta" />
+          <ScalarProperty Name="NumeroFicha" ColumnName="NumeroFicha" />
+          <ScalarProperty Name="TipoCotizacion" ColumnName="TipoCotizacion" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTerminoCondicion">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblTerminoCondicion)">
+        <MappingFragment StoreEntitySet="tblTerminoCondicion">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTerminoCotizacion">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblTerminoCotizacion)">
+        <MappingFragment StoreEntitySet="tblTerminoCotizacion">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCotizacionDetalle">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblCotizacionDetalle)">
+        <MappingFragment StoreEntitySet="tblCotizacionDetalle">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PrecioServicio" ColumnName="PrecioServicio" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="ValorUnitario" ColumnName="ValorUnitario" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCliente">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblCliente)">
+        <MappingFragment StoreEntitySet="tblCliente">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCargo">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblCargo)">
+        <MappingFragment StoreEntitySet="tblCargo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrdenTrabajo">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblOrdenTrabajo)">
+        <MappingFragment StoreEntitySet="tblOrdenTrabajo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AutorizaIngreso" ColumnName="AutorizaIngreso" />
+          <ScalarProperty Name="NumeroOT" ColumnName="NumeroOT" />
+          <ScalarProperty Name="FechaEmision" ColumnName="FechaEmision" />
+          <ScalarProperty Name="FechaLimite" ColumnName="FechaLimite" />
+          <ScalarProperty Name="FechaIngresoItem" ColumnName="FechaIngresoItem" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrdenTrabajoDetalles">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblOrdenTrabajoDetalles)">
+        <MappingFragment StoreEntitySet="tblOrdenTrabajoDetalles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="CodigoItem" ColumnName="CodigoItem" />
+          <ScalarProperty Name="Servicio" ColumnName="Servicio" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFamilia">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SENNOVA.tblFamilia)">
+        <MappingFragment StoreEntitySet="tblFamilia">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="tblProyectotblCentroFormacion" TypeName="DB_SENNOVA.tblProyectotblCentroFormacion" StoreEntitySet="tblProyecto">
+      <EndProperty Name="tblCentroFormacion">
+        <ScalarProperty Name="Id" ColumnName="tblCentroFormacion_Id" />
+      </EndProperty>
+      <EndProperty Name="tblProyecto">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblProyectotblLineaProgramatica" TypeName="DB_SENNOVA.tblProyectotblLineaProgramatica" StoreEntitySet="tblProyecto">
+      <EndProperty Name="tblLineaProgramatica">
+        <ScalarProperty Name="Id" ColumnName="tblLineaProgramatica_Id" />
+      </EndProperty>
+      <EndProperty Name="tblProyecto">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblProyectotblRedConocimientoSectorial" TypeName="DB_SENNOVA.tblProyectotblRedConocimientoSectorial" StoreEntitySet="tblProyecto">
+      <EndProperty Name="tblRedConocimientoSectorial">
+        <ScalarProperty Name="Id" ColumnName="tblRedConocimientoSectorial_Id" />
+      </EndProperty>
+      <EndProperty Name="tblProyecto">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblProyectotblAreaConocimiento" TypeName="DB_SENNOVA.tblProyectotblAreaConocimiento" StoreEntitySet="tblProyecto">
+      <EndProperty Name="tblAreaConocimiento">
+        <ScalarProperty Name="Id" ColumnName="tblAreaConocimiento_Id" />
+      </EndProperty>
+      <EndProperty Name="tblProyecto">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblPersonatblTipoDocumento" TypeName="DB_SENNOVA.tblPersonatblTipoDocumento" StoreEntitySet="tblPersona">
+      <EndProperty Name="tblTipoDocumento">
+        <ScalarProperty Name="Id" ColumnName="tblTipoDocumento_Id" />
+      </EndProperty>
+      <EndProperty Name="tblPersona">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblProductotblTipoProducto" TypeName="DB_SENNOVA.tblProductotblTipoProducto" StoreEntitySet="tblProducto">
+      <EndProperty Name="tblTipoProducto">
+        <ScalarProperty Name="Id" ColumnName="tblTipoProducto_Id" />
+      </EndProperty>
+      <EndProperty Name="tblProducto">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblObjetivoEspecificotblProyecto" TypeName="DB_SENNOVA.tblObjetivoEspecificotblProyecto" StoreEntitySet="tblObjetivoEspecifico">
+      <EndProperty Name="tblProyecto">
+        <ScalarProperty Name="Id" ColumnName="tblProyecto_Id" />
+      </EndProperty>
+      <EndProperty Name="tblObjetivoEspecifico">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblProductotblActividad" TypeName="DB_SENNOVA.tblProductotblActividad" StoreEntitySet="tblProducto">
+      <EndProperty Name="tblActividad">
+        <ScalarProperty Name="Id" ColumnName="tblActividad_Id" />
+      </EndProperty>
+      <EndProperty Name="tblProducto">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblAvanceProyectotblActividad" TypeName="DB_SENNOVA.tblAvanceProyectotblActividad" StoreEntitySet="tblAvanceProyecto">
+      <EndProperty Name="tblActividad">
+        <ScalarProperty Name="Id" ColumnName="tblActividad_Id" />
+      </EndProperty>
+      <EndProperty Name="tblAvanceProyecto">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblRegionaltblRegion" TypeName="DB_SENNOVA.tblRegionaltblRegion" StoreEntitySet="tblRegional">
+      <EndProperty Name="tblRegion">
+        <ScalarProperty Name="Id" ColumnName="tblRegion_Id" />
+      </EndProperty>
+      <EndProperty Name="tblRegional">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblCentroFormaciontblRegional" TypeName="DB_SENNOVA.tblCentroFormaciontblRegional" StoreEntitySet="tblCentroFormacion">
+      <EndProperty Name="tblRegional">
+        <ScalarProperty Name="Id" ColumnName="tblRegional_Id" />
+      </EndProperty>
+      <EndProperty Name="tblCentroFormacion">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblActividadtblObjetivoEspecifico" TypeName="DB_SENNOVA.tblActividadtblObjetivoEspecifico" StoreEntitySet="tblActividad">
+      <EndProperty Name="tblObjetivoEspecifico">
+        <ScalarProperty Name="Id" ColumnName="tblObjetivoEspecifico_Id" />
+      </EndProperty>
+      <EndProperty Name="tblActividad">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblProyectoRubrotblProyecto" TypeName="DB_SENNOVA.tblProyectoRubrotblProyecto" StoreEntitySet="tblProyectoRubro">
+      <EndProperty Name="tblProyecto">
+        <ScalarProperty Name="Id" ColumnName="tblProyecto_Id" />
+      </EndProperty>
+      <EndProperty Name="tblProyectoRubro">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblProyectoRubrotblRubro" TypeName="DB_SENNOVA.tblProyectoRubrotblRubro" StoreEntitySet="tblProyectoRubro">
+      <EndProperty Name="tblRubro">
+        <ScalarProperty Name="Id" ColumnName="tblRubro_Id" />
+      </EndProperty>
+      <EndProperty Name="tblProyectoRubro">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblAreaTecnicatblTipoAreaTecnica" TypeName="DB_SENNOVA.tblAreaTecnicatblTipoAreaTecnica" StoreEntitySet="tblAreaTecnica">
+      <EndProperty Name="tblTipoAreaTecnica">
+        <ScalarProperty Name="Id" ColumnName="tblTipoAreaTecnica_Id" />
+      </EndProperty>
+      <EndProperty Name="tblAreaTecnica">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblServiciotblAreaTecnica" TypeName="DB_SENNOVA.tblServiciotblAreaTecnica" StoreEntitySet="tblServicio">
+      <EndProperty Name="tblAreaTecnica">
+        <ScalarProperty Name="Id" ColumnName="tblAreaTecnica_Id" />
+      </EndProperty>
+      <EndProperty Name="tblServicio">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblIngresosAreasTecnicastblAreaTecnica" TypeName="DB_SENNOVA.tblIngresosAreasTecnicastblAreaTecnica" StoreEntitySet="tblIngresosAreasTecnicas">
+      <EndProperty Name="tblAreaTecnica">
+        <ScalarProperty Name="Id" ColumnName="tblAreaTecnica_Id" />
+      </EndProperty>
+      <EndProperty Name="tblIngresosAreasTecnicas">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblIngresosAreasTecnicastblIngreso" TypeName="DB_SENNOVA.tblIngresosAreasTecnicastblIngreso" StoreEntitySet="tblIngresosAreasTecnicas">
+      <EndProperty Name="tblIngreso">
+        <ScalarProperty Name="Id" ColumnName="tblIngreso_Id" />
+      </EndProperty>
+      <EndProperty Name="tblIngresosAreasTecnicas">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblProyectotblEmpleado" TypeName="DB_SENNOVA.tblProyectotblEmpleado" StoreEntitySet="tblProyecto">
+      <EndProperty Name="tblEmpleado">
+        <ScalarProperty Name="Id" ColumnName="tblEmpleado_Id" />
+      </EndProperty>
+      <EndProperty Name="tblProyecto">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblVisitantetblTipoVisitante" TypeName="DB_SENNOVA.tblVisitantetblTipoVisitante" StoreEntitySet="tblVisitante">
+      <EndProperty Name="tblTipoVisitante">
+        <ScalarProperty Name="Id" ColumnName="tblTipoVisitante_Id" />
+      </EndProperty>
+      <EndProperty Name="tblVisitante">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblIngresotblVisitante" TypeName="DB_SENNOVA.tblIngresotblVisitante" StoreEntitySet="tblIngreso">
+      <EndProperty Name="tblVisitante">
+        <ScalarProperty Name="Id" ColumnName="tblVisitante_Id" />
+      </EndProperty>
+      <EndProperty Name="tblIngreso">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblIngresotblProgramaFormacion" TypeName="DB_SENNOVA.tblIngresotblProgramaFormacion" StoreEntitySet="tblIngreso">
+      <EndProperty Name="tblProgramaFormacion">
+        <ScalarProperty Name="Id" ColumnName="tblProgramaFormacion_Id" />
+      </EndProperty>
+      <EndProperty Name="tblIngreso">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="tblProgramaFormacion_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblIngresotblEmpresa" TypeName="DB_SENNOVA.tblIngresotblEmpresa" StoreEntitySet="tblIngreso">
+      <EndProperty Name="tblEmpresa">
+        <ScalarProperty Name="Id" ColumnName="tblEmpresa_Id" />
+      </EndProperty>
+      <EndProperty Name="tblIngreso">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblAreaTecnicatblEmpleado" TypeName="DB_SENNOVA.tblAreaTecnicatblEmpleado" StoreEntitySet="tblAreaTecnica">
+      <EndProperty Name="tblEmpleado">
+        <ScalarProperty Name="Id" ColumnName="tblEmpleado_Id" />
+      </EndProperty>
+      <EndProperty Name="tblAreaTecnica">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblEmpresatblSectorEconomico" TypeName="DB_SENNOVA.tblEmpresatblSectorEconomico" StoreEntitySet="tblEmpresa">
+      <EndProperty Name="tblSectorEconomico">
+        <ScalarProperty Name="Id" ColumnName="tblSectorEconomico_Id" />
+      </EndProperty>
+      <EndProperty Name="tblEmpresa">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblVisitantetblPersona" TypeName="DB_SENNOVA.tblVisitantetblPersona" StoreEntitySet="tblVisitante">
+      <EndProperty Name="tblPersona">
+        <ScalarProperty Name="Id" ColumnName="tblPersona_Id" />
+      </EndProperty>
+      <EndProperty Name="tblVisitante">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblEmpleadotblPersona" TypeName="DB_SENNOVA.tblEmpleadotblPersona" StoreEntitySet="tblEmpleado">
+      <EndProperty Name="tblPersona">
+        <ScalarProperty Name="Id" ColumnName="tblPersona_Id" />
+      </EndProperty>
+      <EndProperty Name="tblEmpleado">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblIngresotblEmpleado" TypeName="DB_SENNOVA.tblIngresotblEmpleado" StoreEntitySet="tblIngreso">
+      <EndProperty Name="tblEmpleado">
+        <ScalarProperty Name="Id" ColumnName="tblEmpleado_Id" />
+      </EndProperty>
+      <EndProperty Name="tblIngreso">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblDocumentotblTiposDocumentos" TypeName="DB_SENNOVA.tblDocumentotblTiposDocumentos" StoreEntitySet="tblDocumento">
+      <EndProperty Name="tblTiposDocumentos">
+        <ScalarProperty Name="Id" ColumnName="tblTiposDocumentos_Id" />
+      </EndProperty>
+      <EndProperty Name="tblDocumento">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblDetallesDocumentotblDocumento" TypeName="DB_SENNOVA.tblDetallesDocumentotblDocumento" StoreEntitySet="tblDetallesDocumento">
+      <EndProperty Name="tblDocumento">
+        <ScalarProperty Name="Id" ColumnName="tblDocumento_Id" />
+      </EndProperty>
+      <EndProperty Name="tblDetallesDocumento">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblDocumentotblProcedimiento" TypeName="DB_SENNOVA.tblDocumentotblProcedimiento" StoreEntitySet="tblDocumento">
+      <EndProperty Name="tblProcedimiento">
+        <ScalarProperty Name="Id" ColumnName="tblProcedimiento_Id" />
+      </EndProperty>
+      <EndProperty Name="tblDocumento">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblDetallesDocumentotblEmpleado" TypeName="DB_SENNOVA.tblDetallesDocumentotblEmpleado" StoreEntitySet="tblDetallesDocumento">
+      <EndProperty Name="tblEmpleado">
+        <ScalarProperty Name="Id" ColumnName="tblSolicitante_Id" />
+      </EndProperty>
+      <EndProperty Name="tblDetallesDocumento">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="tblSolicitante_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblDetallesDocumentotblEmpleado1" TypeName="DB_SENNOVA.tblDetallesDocumentotblEmpleado1" StoreEntitySet="tblDetallesDocumento">
+      <EndProperty Name="tblEmpleado">
+        <ScalarProperty Name="Id" ColumnName="tblRevisor_Id" />
+      </EndProperty>
+      <EndProperty Name="tblDetallesDocumento">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="tblRevisor_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblDetallesDocumentotblEmpleado2" TypeName="DB_SENNOVA.tblDetallesDocumentotblEmpleado2" StoreEntitySet="tblDetallesDocumento">
+      <EndProperty Name="tblEmpleado">
+        <ScalarProperty Name="Id" ColumnName="tblAprovador_Id" />
+      </EndProperty>
+      <EndProperty Name="tblDetallesDocumento">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="tblAprovador_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblProcedimientotblProcesos" TypeName="DB_SENNOVA.tblProcedimientotblProcesos" StoreEntitySet="tblProcedimiento">
+      <EndProperty Name="tblProcesos">
+        <ScalarProperty Name="Id" ColumnName="tblProcesos_Id" />
+      </EndProperty>
+      <EndProperty Name="tblProcedimiento">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblProcesostblMacroProcesos" TypeName="DB_SENNOVA.tblProcesostblMacroProcesos" StoreEntitySet="tblProcesos">
+      <EndProperty Name="tblMacroProcesos">
+        <ScalarProperty Name="Id" ColumnName="tblMacroProcesos_Id" />
+      </EndProperty>
+      <EndProperty Name="tblProcesos">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblSoftwaretblTipoLicencia" TypeName="DB_SENNOVA.tblSoftwaretblTipoLicencia" StoreEntitySet="tblSoftware">
+      <EndProperty Name="tblTipoLicencia">
+        <ScalarProperty Name="Id" ColumnName="tblTipoLicencia_Id" />
+      </EndProperty>
+      <EndProperty Name="tblSoftware">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblEquipotblTipoEquipo" TypeName="DB_SENNOVA.tblEquipotblTipoEquipo" StoreEntitySet="tblEquipo">
+      <EndProperty Name="tblTipoEquipo">
+        <ScalarProperty Name="Id" ColumnName="tblTipoEquipo_Id" />
+      </EndProperty>
+      <EndProperty Name="tblEquipo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblEquipoSoftwaretblSoftware" TypeName="DB_SENNOVA.tblEquipoSoftwaretblSoftware" StoreEntitySet="tblEquipoSoftware">
+      <EndProperty Name="tblSoftware">
+        <ScalarProperty Name="Id" ColumnName="tblSoftware_Id" />
+      </EndProperty>
+      <EndProperty Name="tblEquipoSoftware">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="tblSoftware_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblMantenimientoEuipotblEquipo" TypeName="DB_SENNOVA.tblMantenimientoEuipotblEquipo" StoreEntitySet="tblMantenimientoEuipo">
+      <EndProperty Name="tblEquipo">
+        <ScalarProperty Name="Id" ColumnName="tblEquipo_Id" />
+      </EndProperty>
+      <EndProperty Name="tblMantenimientoEuipo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblMantenimientoEuipotblMantenimiento" TypeName="DB_SENNOVA.tblMantenimientoEuipotblMantenimiento" StoreEntitySet="tblMantenimientoEuipo">
+      <EndProperty Name="tblMantenimiento">
+        <ScalarProperty Name="Id" ColumnName="tblMantenimiento_Id" />
+      </EndProperty>
+      <EndProperty Name="tblMantenimientoEuipo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblCalibracionEquipotblCalibracion" TypeName="DB_SENNOVA.tblCalibracionEquipotblCalibracion" StoreEntitySet="tblCalibracionEquipo">
+      <EndProperty Name="tblCalibracion">
+        <ScalarProperty Name="Id" ColumnName="tblCalibracion_Id" />
+      </EndProperty>
+      <EndProperty Name="tblCalibracionEquipo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblCalibracionEquipotblEquipo" TypeName="DB_SENNOVA.tblCalibracionEquipotblEquipo" StoreEntitySet="tblCalibracionEquipo">
+      <EndProperty Name="tblEquipo">
+        <ScalarProperty Name="Id" ColumnName="tblEquipo_Id" />
+      </EndProperty>
+      <EndProperty Name="tblCalibracionEquipo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblEquipotblEmpleado" TypeName="DB_SENNOVA.tblEquipotblEmpleado" StoreEntitySet="tblEquipo">
+      <EndProperty Name="tblEmpleado">
+        <ScalarProperty Name="Id" ColumnName="Responsable_Id" />
+      </EndProperty>
+      <EndProperty Name="tblEquipo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblMantenimientotblEmpleado" TypeName="DB_SENNOVA.tblMantenimientotblEmpleado" StoreEntitySet="tblMantenimiento">
+      <EndProperty Name="tblEmpleado">
+        <ScalarProperty Name="Id" ColumnName="Ejecutor_Id" />
+      </EndProperty>
+      <EndProperty Name="tblMantenimiento">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblEmpleadotblMantenimiento" TypeName="DB_SENNOVA.tblEmpleadotblMantenimiento" StoreEntitySet="tblMantenimiento">
+      <EndProperty Name="tblEmpleado">
+        <ScalarProperty Name="Id" ColumnName="Revisor_Id" />
+      </EndProperty>
+      <EndProperty Name="tblMantenimiento">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblEquipotblAreaTecnica" TypeName="DB_SENNOVA.tblEquipotblAreaTecnica" StoreEntitySet="tblEquipo">
+      <EndProperty Name="tblAreaTecnica">
+        <ScalarProperty Name="Id" ColumnName="tblAreaTecnica_Id" />
+      </EndProperty>
+      <EndProperty Name="tblEquipo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblComputotblEquipo" TypeName="DB_SENNOVA.tblComputotblEquipo" StoreEntitySet="tblComputo">
+      <EndProperty Name="tblEquipo">
+        <ScalarProperty Name="Id" ColumnName="tblEquipo_Id" />
+      </EndProperty>
+      <EndProperty Name="tblComputo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblComputotblImpresora" TypeName="DB_SENNOVA.tblComputotblImpresora" StoreEntitySet="tblComputo">
+      <EndProperty Name="tblImpresora">
+        <ScalarProperty Name="Id" ColumnName="tblImpresora_Id" />
+      </EndProperty>
+      <EndProperty Name="tblComputo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="tblImpresora_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblEquipoSoftwaretblComputo" TypeName="DB_SENNOVA.tblEquipoSoftwaretblComputo" StoreEntitySet="tblEquipoSoftware">
+      <EndProperty Name="tblComputo">
+        <ScalarProperty Name="Id" ColumnName="tblComputo_Id" />
+      </EndProperty>
+      <EndProperty Name="tblEquipoSoftware">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblEquipoTecnicotblEquipo" TypeName="DB_SENNOVA.tblEquipoTecnicotblEquipo" StoreEntitySet="tblEquipoTecnico">
+      <EndProperty Name="tblEquipo">
+        <ScalarProperty Name="Id" ColumnName="tblEquipo_Id" />
+      </EndProperty>
+      <EndProperty Name="tblEquipoTecnico">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblEquipoTecnicotblTipoPatron" TypeName="DB_SENNOVA.tblEquipoTecnicotblTipoPatron" StoreEntitySet="tblEquipoTecnico">
+      <EndProperty Name="tblTipoPatron">
+        <ScalarProperty Name="Id" ColumnName="tblTipoPatron_Id" />
+      </EndProperty>
+      <EndProperty Name="tblEquipoTecnico">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="tblTipoPatron_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblEquipoAccesoriotblEquipo" TypeName="DB_SENNOVA.tblEquipoAccesoriotblEquipo" StoreEntitySet="tblEquipoAccesorio">
+      <EndProperty Name="tblEquipo">
+        <ScalarProperty Name="Id" ColumnName="tblEquipo_Id" />
+      </EndProperty>
+      <EndProperty Name="tblEquipoAccesorio">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblEquipoAccesoriotblAccesorios" TypeName="DB_SENNOVA.tblEquipoAccesoriotblAccesorios" StoreEntitySet="tblEquipoAccesorio">
+      <EndProperty Name="tblAccesorios">
+        <ScalarProperty Name="Id" ColumnName="tblAccesorios_Id" />
+      </EndProperty>
+      <EndProperty Name="tblEquipoAccesorio">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="DB_SENNOVA.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="AspNetRoles_Id" />
+      </EndProperty>
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="AspNetUsers_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblTerminoCotizaciontblTerminoCondicion" TypeName="DB_SENNOVA.tblTerminoCotizaciontblTerminoCondicion" StoreEntitySet="tblTerminoCotizacion">
+      <EndProperty Name="tblTerminoCondicion">
+        <ScalarProperty Name="Id" ColumnName="tblTerminoCondicion_Id" />
+      </EndProperty>
+      <EndProperty Name="tblTerminoCotizacion">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblTerminoCotizaciontblCotizacion" TypeName="DB_SENNOVA.tblTerminoCotizaciontblCotizacion" StoreEntitySet="tblTerminoCotizacion">
+      <EndProperty Name="tblCotizacion">
+        <ScalarProperty Name="Id" ColumnName="tblCotizacion_Id" />
+      </EndProperty>
+      <EndProperty Name="tblTerminoCotizacion">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblCotizaciontblProgramaFormacion" TypeName="DB_SENNOVA.tblCotizaciontblProgramaFormacion" StoreEntitySet="tblCotizacion">
+      <EndProperty Name="tblProgramaFormacion">
+        <ScalarProperty Name="Id" ColumnName="tblProgramaFormacion_Id" />
+      </EndProperty>
+      <EndProperty Name="tblCotizacion">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="tblProgramaFormacion_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblCotizaciontblEmpleado" TypeName="DB_SENNOVA.tblCotizaciontblEmpleado" StoreEntitySet="tblCotizacion">
+      <EndProperty Name="tblEmpleado">
+        <ScalarProperty Name="Id" ColumnName="tblElaborador_Id" />
+      </EndProperty>
+      <EndProperty Name="tblCotizacion">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="tblElaborador_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblCotizaciontblEmpleado1" TypeName="DB_SENNOVA.tblCotizaciontblEmpleado1" StoreEntitySet="tblCotizacion">
+      <EndProperty Name="tblEmpleado">
+        <ScalarProperty Name="Id" ColumnName="tblAutorizador_Id" />
+      </EndProperty>
+      <EndProperty Name="tblCotizacion">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="tblAutorizador_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblCotizaciontblEmpleado2" TypeName="DB_SENNOVA.tblCotizaciontblEmpleado2" StoreEntitySet="tblCotizacion">
+      <EndProperty Name="tblEmpleado">
+        <ScalarProperty Name="Id" ColumnName="tblRevisador_Id" />
+      </EndProperty>
+      <EndProperty Name="tblCotizacion">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="tblRevisador_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblCotizacionDetalletblCotizacion" TypeName="DB_SENNOVA.tblCotizacionDetalletblCotizacion" StoreEntitySet="tblCotizacionDetalle">
+      <EndProperty Name="tblCotizacion">
+        <ScalarProperty Name="Id" ColumnName="tblCotizacion_Id" />
+      </EndProperty>
+      <EndProperty Name="tblCotizacionDetalle">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblServiciotblCotizacionDetalle" TypeName="DB_SENNOVA.tblServiciotblCotizacionDetalle" StoreEntitySet="tblCotizacionDetalle">
+      <EndProperty Name="tblServicio">
+        <ScalarProperty Name="Id" ColumnName="tblServicio_Id" />
+      </EndProperty>
+      <EndProperty Name="tblCotizacionDetalle">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblClientetblPersona" TypeName="DB_SENNOVA.tblClientetblPersona" StoreEntitySet="tblCliente">
+      <EndProperty Name="tblPersona">
+        <ScalarProperty Name="Id" ColumnName="tblPersona_Id" />
+      </EndProperty>
+      <EndProperty Name="tblCliente">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblCotizaciontblCliente" TypeName="DB_SENNOVA.tblCotizaciontblCliente" StoreEntitySet="tblCotizacion">
+      <EndProperty Name="tblCliente">
+        <ScalarProperty Name="Id" ColumnName="tblCliente_Id" />
+      </EndProperty>
+      <EndProperty Name="tblCotizacion">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblEmpleadotblCargo" TypeName="DB_SENNOVA.tblEmpleadotblCargo" StoreEntitySet="tblEmpleado">
+      <EndProperty Name="tblCargo">
+        <ScalarProperty Name="Id" ColumnName="tblCargo_Id" />
+      </EndProperty>
+      <EndProperty Name="tblEmpleado">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="tblCargo_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblEmpleadotblRolSennova" TypeName="DB_SENNOVA.tblEmpleadotblRolSennova" StoreEntitySet="tblEmpleado">
+      <EndProperty Name="tblRolSennova">
+        <ScalarProperty Name="Id" ColumnName="tblRolSennova_Id" />
+      </EndProperty>
+      <EndProperty Name="tblEmpleado">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="tblRolSennova_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblOrdenTrabajotblAreaTecnica" TypeName="DB_SENNOVA.tblOrdenTrabajotblAreaTecnica" StoreEntitySet="tblOrdenTrabajo">
+      <EndProperty Name="tblAreaTecnica">
+        <ScalarProperty Name="Id" ColumnName="tblAreaTecnica_Id" />
+      </EndProperty>
+      <EndProperty Name="tblOrdenTrabajo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="tblAreaTecnica_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblOrdenTrabajotblCotizacion" TypeName="DB_SENNOVA.tblOrdenTrabajotblCotizacion" StoreEntitySet="tblOrdenTrabajo">
+      <EndProperty Name="tblCotizacion">
+        <ScalarProperty Name="Id" ColumnName="tblCotizacion_Id" />
+      </EndProperty>
+      <EndProperty Name="tblOrdenTrabajo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="tblCotizacion_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblOrdenTrabajotblEmpleado" TypeName="DB_SENNOVA.tblOrdenTrabajotblEmpleado" StoreEntitySet="tblOrdenTrabajo">
+      <EndProperty Name="tblEmpleado">
+        <ScalarProperty Name="Id" ColumnName="tblResponsable_Id" />
+      </EndProperty>
+      <EndProperty Name="tblOrdenTrabajo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblOrdenTrabajoDetallestblOrdenTrabajo" TypeName="DB_SENNOVA.tblOrdenTrabajoDetallestblOrdenTrabajo" StoreEntitySet="tblOrdenTrabajoDetalles">
+      <EndProperty Name="tblOrdenTrabajo">
+        <ScalarProperty Name="Id" ColumnName="tblOrdenTrabajo_Id" />
+      </EndProperty>
+      <EndProperty Name="tblOrdenTrabajoDetalles">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tblServiciotblFamilia" TypeName="DB_SENNOVA.tblServiciotblFamilia" StoreEntitySet="tblServicio">
+      <EndProperty Name="tblFamilia">
+        <ScalarProperty Name="Id" ColumnName="tblFamilia_Id" />
+      </EndProperty>
+      <EndProperty Name="tblServicio">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
